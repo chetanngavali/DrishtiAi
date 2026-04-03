@@ -69,7 +69,7 @@ Intelligent logic that prioritizes high-value visual information over environmen
         <sub>Android Developer</sub>
       </td>
       <td align="center">
-        <img src="https://ui-avatars.com/api/?name=Suyesh+Sonawane&background=673AB7&color=fff&size=128" width="100px;" alt="Suyesh Sonawane"/><br />
+        <img src="https://github.com/suyashsonawane29-pixel.png" width="100px;" alt="Suyesh Sonawane"/><br />
         <sub><b>Suyesh Sonawane</b></sub><br />
         <sub>Team Leader & Researcher</sub>
       </td>
