@@ -79,7 +79,7 @@ Intelligent logic that prioritizes high-value visual information over environmen
         <sub>Tester & Researcher</sub>
       </td>
       <td align="center">
-        <img src="https://ui-avatars.com/api/?name=Samyak&background=4CAF50&color=fff&size=128" width="100px;" alt="Samyak"/><br />
+        <img src="https://github.com/Samyak01AI.png" width="100px;" alt="Samyak"/><br />
         <sub><b>Samyak</b></sub><br />
         <sub>Android Developer</sub>
       </td>
