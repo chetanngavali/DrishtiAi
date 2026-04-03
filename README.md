@@ -59,14 +59,33 @@ Intelligent logic that prioritizes high-value visual information over environmen
 3.  **Run**:
     Deploy to your device or emulator (Surface Duo / Tablet recommended for testing).
 
-## 👥 Meet the Team
-
-| Name | Role |
-| :--- | :--- |
-| **Suyesh Sonawane** | Team Leader & Researcher |
-| **Chetan Gavali** | Android Development |
-| **Samyak** | Android Developer |
-| **Pranit** | Tester & Researcher |
+<div align="center">
+  <h2>Project Leads & Developers</h2>
+  <table>
+    <tr>
+      <td align="center">
+        <img src="https://github.com/chetanngavali.png" width="100px;" alt="Chetan Gavali"/><br />
+        <sub><b>Chetan Gavali</b></sub><br />
+        <sub>Android Developer</sub>
+      </td>
+      <td align="center">
+        <img src="https://ui-avatars.com/api/?name=Suyesh+Sonawane&background=673AB7&color=fff&size=128" width="100px;" alt="Suyesh Sonawane"/><br />
+        <sub><b>Suyesh Sonawane</b></sub><br />
+        <sub>Team Leader & Researcher</sub>
+      </td>
+      <td align="center">
+        <img src="https://github.com/pra77a8.png" width="100px;" alt="Pranit Adhangle"/><br />
+        <sub><b>Pranit Adhangle</b></sub><br />
+        <sub>Tester & Researcher</sub>
+      </td>
+      <td align="center">
+        <img src="https://ui-avatars.com/api/?name=Samyak&background=4CAF50&color=fff&size=128" width="100px;" alt="Samyak"/><br />
+        <sub><b>Samyak</b></sub><br />
+        <sub>Android Developer</sub>
+      </td>
+    </tr>
+  </table>
+</div>
 
 ## 🤝 Contributing
 
