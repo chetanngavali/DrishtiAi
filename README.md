@@ -83,6 +83,16 @@ Intelligent logic that prioritizes high-value visual information over environmen
         <sub><b>Samyak</b></sub><br />
         <sub>Android Developer</sub>
       </td>
+            <td align="center">
+        <img src="https://github.com/poonamsapte.png" width="100px;" alt="Poonam"/><br />
+        <sub><b>Poonam Sapte</b></sub><br />
+        <sub>Android Developer</sub>
+      </td>
+            <td align="center">
+        <img src="https://github.com/Vedika-Prashant-Chandratre.png" width="100px;" alt="Vedika"/><br />
+        <sub><b>Vedika Chandratre</b></sub><br />
+        <sub>Android Developer</sub>
+      </td>
     </tr>
   </table>
 </div>
