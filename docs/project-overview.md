@@ -123,8 +123,6 @@ Drishti AI has been presented and validated across competitive hackathons, provi
           <ul>
             <li><sub>👑 <b>Suyesh Sonawane</b> (Team Leader) — Android Developer & Researcher</sub></li>
             <li><sub><b>Chetan Gavali</b> — Android Security Tester & Hardware Developer</sub></li>
-            <li><sub><b>Vedika Chandratre</b> — Database Management Specialist & Researcher</sub></li>
-            <li><sub><b>Poonam Sapte</b> — Web Application Tester & Researcher</sub></li>
             <li><sub><b>Samyak</b> — Web Developer & Tester</sub></li>
             <li><sub><b>Pranit</b> — Web Application Developer & Tester</sub></li>
           </ul>
@@ -152,8 +150,6 @@ Drishti AI has been presented and validated across competitive hackathons, provi
             <li><sub>👑 <b>Vedika Chandratre</b> (Team Leader) — Database Management Specialist & Researcher</sub></li>
             <li><sub><b>Chetan Gavali</b> — Android Security Tester & Hardware Developer</sub></li>
             <li><sub><b>Suyesh</b> — Android Developer & Researcher</sub></li>
-            <li><sub><b>Poonam Sapte</b> — Web Application Tester & Researcher</sub></li>
-            <li><sub><b>Samyak</b> — Web Developer & Tester</sub></li>
             <li><sub><b>Pranit</b> — Web Application Developer & Tester</sub></li>
           </ul>
         </td>
