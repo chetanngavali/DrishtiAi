@@ -1,10 +1,7 @@
 <div align="center">
   <img src="assets/banner.png" width="100%" alt="Drishti AI Banner" />
-  <br /><br />
-  <img src="assets/logo.png" width="200px" alt="Drishti AI Official Logo" />
 
-  # Drishti AI: Assistive Intelligence & Smart Mobility Platform
-  ### *See a Brighter Tomorrow*
+  <br />
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
   [![Platform: Android](https://img.shields.io/badge/Platform-Android%209.0%2B%20(API%2028--36)-green.svg)](docs/testing/device-compatibility.md)
@@ -14,6 +11,11 @@
   [![Hardware: ESP32 + ToF](https://img.shields.io/badge/Hardware-ESP32%20%7C%20VL53L0X%20ToF-orange.svg)](docs/hardware/smart-cane-overview.md)
   [![Automated Tests](https://img.shields.io/badge/Unit%20Tests-476%2F476%20PASS-brightgreen.svg)](docs/testing/verification-results.md)
   [![Release Status](https://img.shields.io/badge/Release%20Status-Release%20Candidate%20(RC--1)-blueviolet.svg)](CHANGELOG.md)
+
+  ---
+
+  # Drishti AI: Assistive Intelligence & Smart Mobility Platform
+  ### *See a Brighter Tomorrow*
 
   ---
 
