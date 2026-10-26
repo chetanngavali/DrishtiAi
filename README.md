@@ -42,6 +42,55 @@ Drishti AI features an exhaustive documentation suite organized within the [`doc
 
 ---
 
+## 🏆 Hackathons & Achievements
+
+Drishti AI has been presented at multiple hackathons, providing opportunities to demonstrate the project, collaborate as a team, and improve the solution.
+
+### 1. Hack4Innovation (Mumbai) — Finalists 🏅
+
+**Achievement:** Selected as finalists with the Drishti AI team at Hack4Innovation (Mumbai).
+
+**Team Members:**
+
+- **Chetan Gavali** — Android Security Tester & Hardware Developer
+- **Suyesh** — Android Developer & Researcher
+- **Vedika Chandratre** — Database Management Specialist & Researcher
+- **Poonam Sapte** — Web Application Tester & Researcher
+- **Samyak** — Web Developer & Tester
+- **Pranit** — Web Application Developer & Tester
+
+### 2. AI-thon 2.0 (Sangamner) 🚀
+
+**Achievement:** Participated in AI-thon 2.0, Sangamner, presenting the Drishti AI project.
+
+**Team Members:**
+
+- **Chetan Gavali** — Android Security Tester & Hardware Developer
+- **Suyesh** — Android Developer & Researcher
+- **Vedika Chandratre** — Database Management Specialist & Researcher
+- **Poonam Sapte** — Web Application Tester & Researcher
+- **Samyak** — Web Developer & Tester
+- **Pranit** — Web Application Developer & Tester
+
+### 3. Code Apex 3.0 (VIT Pune) — Finalists 🏆
+
+**Achievement:** Selected as finalists at Code Apex 3.0 (VIT Pune).
+
+**Team Members:**
+
+- **Chetan Gavali** — Android Security Tester & Hardware Developer
+- **Suyesh** — Android Developer & Researcher
+- **Vedika Chandratre** — Database Management Specialist & Researcher
+- **Poonam Sapte** — Web Application Tester & Researcher
+- **Samyak** — Web Developer & Tester
+- **Pranit** — Web Application Developer & Tester
+
+### 🌟 Our Journey
+
+Each hackathon has helped the Drishti AI team strengthen its technical skills, collaborate across development and research, and advance its assistive technology solution. Our goal is to build a more accessible and independent experience for visually impaired users through AI, Android development, and smart-cane hardware integration.
+
+---
+
 ## 🏛️ System Architecture
 
 Drishti AI coordinates four distributed tiers to deliver sub-50ms hard real-time safety at the edge while streaming telemetry to remote guardians:
@@ -240,55 +289,6 @@ Connect your physical Android handset via USB with USB Debugging enabled:
 ```bash
 adb install -r app/build/outputs/apk/debug/app-debug.apk
 ```
-
----
-
-## 🏆 Hackathons & Achievements
-
-Drishti AI has been presented at multiple hackathons, providing opportunities to demonstrate the project, collaborate as a team, and improve the solution.
-
-### 1. Hack4Innovation (Mumbai) — Finalists 🏅
-
-**Achievement:** Selected as finalists with the Drishti AI team at Hack4Innovation (Mumbai).
-
-**Team Members:**
-
-- **Chetan Gavali** — Android Security Tester & Hardware Developer
-- **Suyesh** — Android Developer & Researcher
-- **Vedika Chandratre** — Database Management Specialist & Researcher
-- **Poonam Sapte** — Web Application Tester & Researcher
-- **Samyak** — Web Developer & Tester
-- **Pranit** — Web Application Developer & Tester
-
-### 2. AI-thon 2.0 (Sangamner) 🚀
-
-**Achievement:** Participated in AI-thon 2.0, Sangamner, presenting the Drishti AI project.
-
-**Team Members:**
-
-- **Chetan Gavali** — Android Security Tester & Hardware Developer
-- **Suyesh** — Android Developer & Researcher
-- **Vedika Chandratre** — Database Management Specialist & Researcher
-- **Poonam Sapte** — Web Application Tester & Researcher
-- **Samyak** — Web Developer & Tester
-- **Pranit** — Web Application Developer & Tester
-
-### 3. Code Apex 3.0 (VIT Pune) — Finalists 🏆
-
-**Achievement:** Selected as finalists at Code Apex 3.0 (VIT Pune).
-
-**Team Members:**
-
-- **Chetan Gavali** — Android Security Tester & Hardware Developer
-- **Suyesh** — Android Developer & Researcher
-- **Vedika Chandratre** — Database Management Specialist & Researcher
-- **Poonam Sapte** — Web Application Tester & Researcher
-- **Samyak** — Web Developer & Tester
-- **Pranit** — Web Application Developer & Tester
-
-### 🌟 Our Journey
-
-Each hackathon has helped the Drishti AI team strengthen its technical skills, collaborate across development and research, and advance its assistive technology solution. Our goal is to build a more accessible and independent experience for visually impaired users through AI, Android development, and smart-cane hardware integration.
 
 ---
 
