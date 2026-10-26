@@ -243,7 +243,9 @@ adb install -r app/build/outputs/apk/debug/app-debug.apk
 
 ---
 
-## 👥 Project Leads & Developers
+## 👥 Project Team and Responsibilities
+
+Drishti AI is developed by a multidisciplinary team working across Android development, cybersecurity, embedded hardware, database management, web development, testing, and research.
 
 <div align="center">
   <table>
@@ -253,46 +255,133 @@ adb install -r app/build/outputs/apk/debug/app-debug.apk
           <img src="https://github.com/chetanngavali.png" width="100px;" alt="Chetan Gavali"/><br />
           <sub><b>Chetan Gavali</b></sub>
         </a><br />
-        <sub>Lead Android Developer & System Architect</sub>
+        <sub>Android Security Tester & Hardware Developer</sub>
       </td>
       <td align="center">
         <a href="https://github.com/suyashsonawane29-pixel">
-          <img src="https://github.com/suyashsonawane29-pixel.png" width="100px;" alt="Suyesh Sonawane"/><br />
-          <sub><b>Suyesh Sonawane</b></sub>
+          <img src="https://github.com/suyashsonawane29-pixel.png" width="100px;" alt="Suyesh"/><br />
+          <sub><b>Suyesh</b></sub>
         </a><br />
-        <sub>Team Leader & AI Researcher</sub>
-      </td>
-      <td align="center">
-        <a href="https://github.com/pra77a8">
-          <img src="https://github.com/pra77a8.png" width="100px;" alt="Pranit Adhangle"/><br />
-          <sub><b>Pranit Adhangle</b></sub>
-        </a><br />
-        <sub>QA Engineer & Hardware Researcher</sub>
-      </td>
-      <td align="center">
-        <a href="https://github.com/Samyak01AI">
-          <img src="https://github.com/Samyak01AI.png" width="100px;" alt="Samyak"/><br />
-          <sub><b>Samyak</b></sub>
-        </a><br />
-        <sub>Android Developer</sub>
-      </td>
-      <td align="center">
-        <a href="https://github.com/poonamsapte">
-          <img src="https://github.com/poonamsapte.png" width="100px;" alt="Poonam Sapte"/><br />
-          <sub><b>Poonam Sapte</b></sub>
-        </a><br />
-        <sub>Researcher & Accessibility</sub>
+        <sub>Android Developer & Researcher</sub>
       </td>
       <td align="center">
         <a href="https://github.com/Vedika-Prashant-Chandratre">
           <img src="https://github.com/Vedika-Prashant-Chandratre.png" width="100px;" alt="Vedika Chandratre"/><br />
           <sub><b>Vedika Chandratre</b></sub>
         </a><br />
-        <sub>Researcher & UX</sub>
+        <sub>Database Management Specialist & Researcher</sub>
+      </td>
+      <td align="center">
+        <a href="https://github.com/poonamsapte">
+          <img src="https://github.com/poonamsapte.png" width="100px;" alt="Poonam Sapte"/><br />
+          <sub><b>Poonam Sapte</b></sub>
+        </a><br />
+        <sub>Web Application Tester & Researcher</sub>
+      </td>
+      <td align="center">
+        <a href="https://github.com/Samyak01AI">
+          <img src="https://github.com/Samyak01AI.png" width="100px;" alt="Samyak"/><br />
+          <sub><b>Samyak</b></sub>
+        </a><br />
+        <sub>Web Developer & Tester</sub>
+      </td>
+      <td align="center">
+        <a href="https://github.com/pra77a8">
+          <img src="https://github.com/pra77a8.png" width="100px;" alt="Pranit"/><br />
+          <sub><b>Pranit</b></sub>
+        </a><br />
+        <sub>Web Application Developer & Tester</sub>
       </td>
     </tr>
   </table>
 </div>
+
+### 1. Chetan Gavali
+
+**Role:** Android Security Tester & Hardware Developer
+
+**Responsibilities:**
+
+- Perform security testing of the Android application.
+- Identify potential application vulnerabilities and authentication weaknesses.
+- Test role-based access control and authorization workflows.
+- Develop and integrate embedded hardware components for the Drishti smart cane.
+- Work with ESP32, VL53L0X distance sensors, and related IoT components.
+- Support hardware-to-Android communication and telemetry integration.
+- Test emergency SOS and smart-cane functionality.
+- Contribute to system integration, security validation, and technical documentation.
+
+### 2. Suyesh
+
+**Role:** Android Developer & Researcher
+
+**Responsibilities:**
+
+- Develop and maintain Android application features.
+- Implement and improve user interfaces and application workflows.
+- Research Android development techniques and assistive technologies.
+- Support integration of voice commands, accessibility features, and application modules.
+- Investigate technical issues and contribute to feature testing.
+- Document implementation approaches and research findings.
+
+### 3. Vedika Chandratre
+
+**Role:** Database Management Specialist & Researcher
+
+**Responsibilities:**
+
+- Support database schema design and management.
+- Maintain and organize application data structures.
+- Research database technologies and suitable data-management approaches.
+- Assist with authentication-related data and parent/guardian relationship records.
+- Support database integrity, access-control policies, and data consistency testing.
+- Document database architecture and research findings.
+
+### 4. Poonam Sapte
+
+**Role:** Web Application Tester & Researcher
+
+**Responsibilities:**
+
+- Test web application functionality and user workflows.
+- Identify and document defects and unexpected behavior.
+- Perform authorized web application security and usability testing.
+- Research web technologies, testing methodologies, and relevant security practices.
+- Prepare test cases, record findings, and support issue verification.
+- Contribute to technical reports and research documentation.
+
+### 5. Samyak
+
+**Role:** Web Developer & Tester
+
+**Responsibilities:**
+
+- Develop and maintain web application components.
+- Implement website interfaces and application functionality.
+- Test web features, forms, navigation, and responsive layouts.
+- Identify and resolve implementation defects.
+- Collaborate with the testing team to verify fixes.
+- Support web application integration and technical documentation.
+
+### 6. Pranit
+
+**Role:** Web Application Developer & Tester
+
+**Responsibilities:**
+
+- Develop and maintain web application features and interfaces.
+- Implement responsive layouts and user-facing functionality.
+- Test web application workflows, forms, navigation, and cross-device compatibility.
+- Identify, document, and help resolve software defects.
+- Perform functional and regression testing.
+- Collaborate with the web development team to verify fixes and improve application quality.
+- Contribute to technical documentation and web technology research.
+
+### Team Collaboration
+
+The team works collaboratively to develop and evaluate Drishti AI as an assistive technology platform. Responsibilities span Android software, embedded hardware, database systems, web applications, testing, cybersecurity, and technical research.
+
+Team members may collaborate across modules when integration, debugging, testing, or research requires shared effort.
 
 ---
 
