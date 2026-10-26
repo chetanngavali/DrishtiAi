@@ -44,50 +44,83 @@ Drishti AI features an exhaustive documentation suite organized within the [`doc
 
 ## 🏆 Hackathons & Achievements
 
-Drishti AI has been presented at multiple hackathons, providing opportunities to demonstrate the project, collaborate as a team, and improve the solution.
+Drishti AI has been presented and validated across competitive hackathons, providing empirical feedback to refine our hardware-to-cloud assistive architecture.
 
-### 1. Hack4Innovation (Mumbai) — Finalists 🏅
+<div align="center">
+  <table>
+    <thead>
+      <tr>
+        <th align="center" width="33.3%">💡 <b>Hack4Innovation</b></th>
+        <th align="center" width="33.3%">⚡ <b>AI-thon 2.0</b></th>
+        <th align="center" width="33.3%">🔥 <b>Code Apex 3.0</b></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td align="center">
+          <sub><b>📍 Mumbai, MH</b></sub><br />
+          <img src="https://img.shields.io/badge/Status-Finalist%20🏅-F59E0B?style=for-the-badge&labelColor=18181B" alt="Finalist Badge" />
+        </td>
+        <td align="center">
+          <sub><b>📍 Sangamner, MH</b></sub><br />
+          <img src="https://img.shields.io/badge/Status-Demonstrated%20🚀-10B981?style=for-the-badge&labelColor=18181B" alt="Showcase Badge" />
+        </td>
+        <td align="center">
+          <sub><b>📍 VIT Pune, MH</b></sub><br />
+          <img src="https://img.shields.io/badge/Status-Finalist%20🏆-6366F1?style=for-the-badge&labelColor=18181B" alt="Finalist Badge" />
+        </td>
+      </tr>
+      <tr>
+        <td align="left" valign="top">
+          <b>🏅 Grand Finalist Stage</b>
+          <p>Presented the vision-first assistive pipeline and embedded smart-cane telemetry to the jury.</p>
+          <hr />
+          <sub><b>👥 Active Roster:</b></sub>
+          <ul>
+            <li><sub><b>Chetan Gavali</b> — Android Security Tester & Hardware Developer</sub></li>
+            <li><sub><b>Suyesh</b> — Android Developer & Researcher</sub></li>
+            <li><sub><b>Vedika Chandratre</b> — Database Management Specialist & Researcher</sub></li>
+            <li><sub><b>Poonam Sapte</b> — Web Application Tester & Researcher</sub></li>
+            <li><sub><b>Samyak</b> — Web Developer & Tester</sub></li>
+            <li><sub><b>Pranit</b> — Web Application Developer & Tester</sub></li>
+          </ul>
+        </td>
+        <td align="left" valign="top">
+          <b>🚀 Assistive Innovation Track</b>
+          <p>Showcased offline multilingual speech commands, obstacle ranging, and caregiver emergency lifeline.</p>
+          <hr />
+          <sub><b>👥 Active Roster:</b></sub>
+          <ul>
+            <li><sub><b>Chetan Gavali</b> — Android Security Tester & Hardware Developer</sub></li>
+            <li><sub><b>Suyesh</b> — Android Developer & Researcher</sub></li>
+            <li><sub><b>Vedika Chandratre</b> — Database Management Specialist & Researcher</sub></li>
+            <li><sub><b>Poonam Sapte</b> — Web Application Tester & Researcher</sub></li>
+            <li><sub><b>Samyak</b> — Web Developer & Tester</sub></li>
+            <li><sub><b>Pranit</b> — Web Application Developer & Tester</sub></li>
+          </ul>
+        </td>
+        <td align="left" valign="top">
+          <b>🏆 Grand Finalist Selection</b>
+          <p>Selected as finalists for engineered synergy uniting ML Kit OCR, telephony, and smart-cane sensing.</p>
+          <hr />
+          <sub><b>👥 Active Roster:</b></sub>
+          <ul>
+            <li><sub><b>Chetan Gavali</b> — Android Security Tester & Hardware Developer</sub></li>
+            <li><sub><b>Suyesh</b> — Android Developer & Researcher</sub></li>
+            <li><sub><b>Vedika Chandratre</b> — Database Management Specialist & Researcher</sub></li>
+            <li><sub><b>Poonam Sapte</b> — Web Application Tester & Researcher</sub></li>
+            <li><sub><b>Samyak</b> — Web Developer & Tester</sub></li>
+            <li><sub><b>Pranit</b> — Web Application Developer & Tester</sub></li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-**Achievement:** Selected as finalists with the Drishti AI team at Hack4Innovation (Mumbai).
-
-**Team Members:**
-
-- **Chetan Gavali** — Android Security Tester & Hardware Developer
-- **Suyesh** — Android Developer & Researcher
-- **Vedika Chandratre** — Database Management Specialist & Researcher
-- **Poonam Sapte** — Web Application Tester & Researcher
-- **Samyak** — Web Developer & Tester
-- **Pranit** — Web Application Developer & Tester
-
-### 2. AI-thon 2.0 (Sangamner) 🚀
-
-**Achievement:** Participated in AI-thon 2.0, Sangamner, presenting the Drishti AI project.
-
-**Team Members:**
-
-- **Chetan Gavali** — Android Security Tester & Hardware Developer
-- **Suyesh** — Android Developer & Researcher
-- **Vedika Chandratre** — Database Management Specialist & Researcher
-- **Poonam Sapte** — Web Application Tester & Researcher
-- **Samyak** — Web Developer & Tester
-- **Pranit** — Web Application Developer & Tester
-
-### 3. Code Apex 3.0 (VIT Pune) — Finalists 🏆
-
-**Achievement:** Selected as finalists at Code Apex 3.0 (VIT Pune).
-
-**Team Members:**
-
-- **Chetan Gavali** — Android Security Tester & Hardware Developer
-- **Suyesh** — Android Developer & Researcher
-- **Vedika Chandratre** — Database Management Specialist & Researcher
-- **Poonam Sapte** — Web Application Tester & Researcher
-- **Samyak** — Web Developer & Tester
-- **Pranit** — Web Application Developer & Tester
-
-### 🌟 Our Journey
-
-Each hackathon has helped the Drishti AI team strengthen its technical skills, collaborate across development and research, and advance its assistive technology solution. Our goal is to build a more accessible and independent experience for visually impaired users through AI, Android development, and smart-cane hardware integration.
+> [!TIP]
+> ### 🌟 Our Journey
+> Each hackathon has helped the Drishti AI team strengthen its technical skills, collaborate across development and research, and advance its assistive technology solution. Our goal is to build a more accessible and independent experience for visually impaired users through AI, Android development, and smart-cane hardware integration.
 
 ---
 
