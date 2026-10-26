@@ -88,32 +88,50 @@ Drishti AI establishes two clearly separated user personas enforced at the datab
 
 ## 6. 🏆 Hackathons & Achievements
 
-Drishti AI has been developed and presented through multiple hackathons, giving our team opportunities to demonstrate the project, receive feedback, and improve our assistive technology solution.
+Drishti AI has been presented at multiple hackathons, providing opportunities to demonstrate the project, collaborate as a team, and improve the solution.
 
-### 6.1 Mumbai Hackathon
+### 6.1 Mumbai Hackathon — Finalists 🏅
 
-- **Participation:** Presented Drishti AI with our team members.
-- **Achievement:** Participated in the hackathon and progressed to the finalist stage.
-- **Focus:** Showcasing our assistive technology concept and its potential to support visually impaired users.
+**Achievement:** Selected as finalists with the Drishti AI team.
 
-### 6.2 AITHON — Sangamner
+**Team Members:**
 
-- **Participation:** Presented and developed the Drishti AI project as part of our hackathon journey.
-- **Focus:** Demonstrating the project's accessibility features, technical implementation, and real-world application.
+- **Chetan Gavali** — Android Security Tester & Hardware Developer
+- **Suyesh** — Android Developer & Researcher
+- **Vedika Chandratre** — Database Management Specialist & Researcher
+- **Poonam Sapte** — Web Application Tester & Researcher
+- **Samyak** — Web Developer & Tester
+- **Pranit** — Web Application Developer & Tester
 
-### 6.3 VIT Pune Hackathon
+### 6.2 AITHON — Sangamner 🚀
 
-- **Participation:** Presented Drishti AI at VIT Pune.
-- **Achievement:** Selected as finalists.
-- **Focus:** Presenting our solution, technical approach, and its potential impact on independent living and accessibility.
+**Achievement:** Participated in AITHON, Sangamner, presenting the Drishti AI project.
 
-### 6.4 Our Journey
+**Team Members:**
 
-Each hackathon has helped us refine our ideas, strengthen our technical skills, collaborate as a team, and advance Drishti AI toward a more practical assistive technology platform.
+- **Chetan Gavali** — Android Security Tester & Hardware Developer
+- **Suyesh** — Android Developer & Researcher
+- **Vedika Chandratre** — Database Management Specialist & Researcher
+- **Poonam Sapte** — Web Application Tester & Researcher
+- **Samyak** — Web Developer & Tester
+- **Pranit** — Web Application Developer & Tester
 
-We are continuing to improve the application, smart-cane integration, accessibility features, and safety workflows based on development progress and feedback.
+### 6.3 VIT Pune Hackathon — Finalists 🏆
 
-**Team:** Chetan Gavali, Suyesh, Vedika Chandratre, Poonam Sapte, Samyak, and Pranit.
+**Achievement:** Selected as finalists at the VIT Pune hackathon.
+
+**Team Members:**
+
+- **Chetan Gavali** — Android Security Tester & Hardware Developer
+- **Suyesh** — Android Developer & Researcher
+- **Vedika Chandratre** — Database Management Specialist & Researcher
+- **Poonam Sapte** — Web Application Tester & Researcher
+- **Samyak** — Web Developer & Tester
+- **Pranit** — Web Application Developer & Tester
+
+### 6.4 🌟 Our Journey
+
+Each hackathon has helped the Drishti AI team strengthen its technical skills, collaborate across development and research, and advance its assistive technology solution. Our goal is to build a more accessible and independent experience for visually impaired users through AI, Android development, and smart-cane hardware integration.
 
 ---
 
