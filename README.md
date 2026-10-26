@@ -30,16 +30,78 @@
 
 ## 📑 Master Documentation Index
 
-Drishti AI features an exhaustive documentation suite organized within the [`docs/`](docs/) directory:
+Drishti AI features an exhaustive documentation suite organized across 6 architectural domains within the [`docs/`](docs/) directory:
 
-| Architecture Domain | Specialized Documentation Links |
-| :--- | :--- |
-| **System Overview & Specs** | • [Project Overview](docs/project-overview.md)<br>• [Requirements & Feature Inventory](docs/requirements-and-features.md)<br>• [System Architecture & Data Flows](docs/system-architecture.md) |
-| **Android Application** | • [App Architecture & Lifecycle](docs/android-app/app-architecture.md)<br>• [Multilingual Voice Assistant & Routing](docs/android-app/voice-assistant.md)<br>• [Computer Vision, OCR & Hazard Risk Engine](docs/android-app/vision-and-ocr.md)<br>• [Hands-Free Telephony & Call Control](docs/android-app/call-management.md)<br>• [Voice Calendar & Event Scheduling](docs/android-app/calendar-and-events.md)<br>• [Accessibility, Design Tokens & Ergonomics](docs/android-app/accessibility.md) |
-| **Smart Cane Hardware** | • [Smart Cane System Overview](docs/hardware/smart-cane-overview.md)<br>• [VL53L0X Time-of-Flight Lidar & ESP32](docs/hardware/esp32-vl53l0x.md)<br>• [Wiring Schematics & Power Management](docs/hardware/wiring-and-power.md)<br>• [Nordic UART BLE Telemetry Protocol](docs/hardware/ble-telemetry.md) |
-| **Cloud Backend & Security** | • [Supabase Cloud Architecture](docs/backend/supabase-architecture.md)<br>• [PostgreSQL Database Schema & Data Dictionary](docs/backend/database-schema.md)<br>• [Authentication, Roles & RLS Matrix](docs/backend/authentication-and-roles.md)<br>• [Cryptographic Guardian Pairing Ceremony](docs/backend/guardian-pairing.md)<br>• [Emergency SOS & Telemetry Ingestion](docs/backend/sos-telemetry.md) |
-| **Offline-First Engineering** | • [Room Local Persistence & Entities](docs/offline-first/local-storage.md)<br>• [Offline-to-Online Synchronization Engine](docs/offline-first/synchronization.md)<br>• [Conflict Resolution & Reconciliation Policies](docs/offline-first/conflict-resolution.md) |
-| **Safety & Testing Records** | • [Emergency SOS Protocol & Siren](docs/safety/emergency-sos.md)<br>• [Hardware Boundaries & Safety Disclaimers](docs/safety/limitations.md)<br>• [Verification Strategy & Quality Gates](docs/testing/test-strategy.md)<br>• [Empirical Test Records & Pass Rates](docs/testing/verification-results.md)<br>• [Hardware & Handset Compatibility Matrix](docs/testing/device-compatibility.md) |
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🧭 System Overview & Specs</h3>
+      <p><i>Foundational architecture, engineering principles, and system requirements.</i></p>
+      <ul>
+        <li>📄 <b><a href="docs/project-overview.md">Project Overview</a></b> — Mission, problem statement & ecosystem goals</li>
+        <li>📋 <b><a href="docs/requirements-and-features.md">Requirements & Features</a></b> — Functional matrix & readiness status</li>
+        <li>🏗️ <b><a href="docs/system-architecture.md">System Architecture</a></b> — 4-tier data pipelines & sequence flows</li>
+      </ul>
+    </td>
+    <td width="50%" valign="top">
+      <h3>📱 Android Native Application</h3>
+      <p><i>Edge-computing voice assistant, computer vision, and hands-free telephony.</i></p>
+      <ul>
+        <li>📐 <b><a href="docs/android-app/app-architecture.md">App Architecture</a></b> — Clean Architecture, MVI & Compose lifecycle</li>
+        <li>🎙️ <b><a href="docs/android-app/voice-assistant.md">Voice Assistant & Routing</a></b> — Offline multilingual intent engine</li>
+        <li>👁️ <b><a href="docs/android-app/vision-and-ocr.md">Vision & OCR Pipeline</a></b> — ML Kit obstacle & text recognition</li>
+        <li>📞 <b><a href="docs/android-app/call-management.md">Call Management</a></b> — Private on-device hands-free telephony</li>
+        <li>📅 <b><a href="docs/android-app/calendar-and-events.md">Voice Calendar</a></b> — Conversational scheduling & alarms</li>
+        <li>♿ <b><a href="docs/android-app/accessibility.md">Accessibility & Design</a></b> — Ergonomics & high-contrast tokens</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🦯 Smart Cane Hardware</h3>
+      <p><i>Embedded ESP32-CAM firmware, ToF laser ranging, and haptic alerts.</i></p>
+      <ul>
+        <li>🔌 <b><a href="docs/hardware/smart-cane-overview.md">Smart Cane Overview</a></b> — Microcontroller architecture & BOM</li>
+        <li>📡 <b><a href="docs/hardware/esp32-vl53l0x.md">VL53L0X ToF Lidar</a></b> — 10 Hz laser ranging & median filtering</li>
+        <li>⚡ <b><a href="docs/hardware/wiring-and-power.md">Wiring & Power</a></b> — Schematics, voltage regulation & battery life</li>
+        <li>📶 <b><a href="docs/hardware/ble-telemetry.md">BLE Telemetry Protocol</a></b> — Nordic UART GATT telemetry stream</li>
+      </ul>
+    </td>
+    <td width="50%" valign="top">
+      <h3>☁️ Cloud Backend & Security</h3>
+      <p><i>Supabase PostgreSQL 15, Row-Level Security, and caregiver telemetry.</i></p>
+      <ul>
+        <li>🏛️ <b><a href="docs/backend/supabase-architecture.md">Supabase Architecture</a></b> — Cloud services & edge infrastructure</li>
+        <li>🗄️ <b><a href="docs/backend/database-schema.md">Database Schema</a></b> — Relational models & data dictionary</li>
+        <li>🔐 <b><a href="docs/backend/authentication-and-roles.md">Authentication & RLS</a></b> — Tenant isolation & RBAC matrix</li>
+        <li>🤝 <b><a href="docs/backend/guardian-pairing.md">Guardian Pairing Ceremony</a></b> — Cryptographic out-of-band exchange</li>
+        <li>🚨 <b><a href="docs/backend/sos-telemetry.md">Emergency SOS Telemetry</a></b> — Live location ingestion & SMS dispatch</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🔄 Offline-First Engineering</h3>
+      <p><i>Local SQLite/Room outbox persistence and asynchronous cloud synchronization.</i></p>
+      <ul>
+        <li>💾 <b><a href="docs/offline-first/local-storage.md">Local Storage & Room DB</a></b> — Relational schemas, DAOs & encryption</li>
+        <li>🔁 <b><a href="docs/offline-first/synchronization.md">Synchronization Engine</a></b> — Network monitoring & queue flush</li>
+        <li>⚖️ <b><a href="docs/offline-first/conflict-resolution.md">Conflict Resolution</a></b> — Monotonic clocks & reconciliation</li>
+      </ul>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🧪 Safety, Verification & Quality</h3>
+      <p><i>Empirical test suites, hardware verification, and compliance benchmarks.</i></p>
+      <ul>
+        <li>🚨 <b><a href="docs/safety/emergency-sos.md">Emergency SOS Protocol</a></b> — Siren, countdown & cancel UX</li>
+        <li>⚠️ <b><a href="docs/safety/limitations.md">Hardware Limitations</a></b> — Sensor boundaries & safety disclaimers</li>
+        <li>🎯 <b><a href="docs/testing/test-strategy.md">Verification Strategy</a></b> — Test pyramid & quality gates</li>
+        <li>✅ <b><a href="docs/testing/verification-results.md">Empirical Test Records</a></b> — 476/476 pass rates on device</li>
+        <li>📲 <b><a href="docs/testing/device-compatibility.md">Device Compatibility</a></b> — Handset & OS validation matrix</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 ---
 
