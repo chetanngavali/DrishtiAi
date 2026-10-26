@@ -11,6 +11,7 @@
   [![Hardware: ESP32 + ToF](https://img.shields.io/badge/Hardware-ESP32%20%7C%20VL53L0X%20ToF-orange.svg)](docs/hardware/smart-cane-overview.md)
   [![Automated Tests](https://img.shields.io/badge/Unit%20Tests-476%2F476%20PASS-brightgreen.svg)](docs/testing/verification-results.md)
   [![Release Status](https://img.shields.io/badge/Release%20Status-Release%20Candidate%20(RC--1)-blueviolet.svg)](CHANGELOG.md)
+  [![Repository Views](https://komarev.com/ghpvc/?username=chetanngavali&repo=DrishtiAi&label=Repository%20Views&color=0e75b6)](https://github.com/chetanngavali/DrishtiAi)
 
   ---
 
