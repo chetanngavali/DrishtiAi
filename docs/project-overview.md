@@ -1,0 +1,85 @@
+<div align="center">
+  <img src="../assets/logo.png" width="180px" alt="Drishti AI Official Logo" />
+
+  # Drishti AI — Project Overview
+  ### *See a Brighter Tomorrow*
+</div>
+
+## 1. Executive Summary
+
+**Drishti AI** is an advanced assistive technology and smart mobility ecosystem engineered to empower visually impaired and low-vision individuals to navigate physical spaces independently, access printed information, communicate seamlessly, and maintain a secure emergency lifeline with trusted caregivers and emergency services.
+
+By uniting a native Android application (Kotlin, Jetpack Compose, CameraX, ML Kit, TelecomManager) with custom embedded smart-cane hardware (ESP32-CAM, VL53L0X Time-of-Flight lidar, BLE telemetry, autonomous haptic feedback) and a secure cloud backend (Supabase PostgreSQL, Row-Level Security, Edge Functions), Drishti AI eliminates the fragmentation of existing assistive solutions into a cohesive, voice-first, offline-capable platform.
+
+```mermaid
+graph TD
+    User([Visually Impaired User / Ward]) <-->|Voice, TTS & Haptics| AndroidApp[Drishti Native Android Client]
+    Cane[ESP32 Smart Cane + ToF Lidar] <-->|BLE GATT & Telemetry| AndroidApp
+    AndroidApp <-->|CameraX & Local ML Kit| Perception[On-Device Vision & OCR Pipeline]
+    AndroidApp <-->|Room DB Outbox & Sync| LocalStore[(Local Room Database)]
+    AndroidApp <-->|Authenticated PostgREST / Realtime| Backend[(Supabase PostgreSQL + RLS)]
+    Backend <-->|Authorized Live Stream & Maps| GuardianApp[Parent / Guardian Dashboard]
+    Guardian([Authorized Parent / Guardian]) <-->|Pairing Code & Approvals| GuardianApp
+```
+
+---
+
+## 2. Problem Statement
+
+Globally, over 253 million people live with moderate to severe visual impairment or blindness. In their daily lives, individuals face persistent, multi-dimensional challenges:
+
+1. **Environmental Navigation & Obstacle Awareness:** Traditional white canes detect obstacles only at ground level within immediate physical reach. Overhead obstacles (tree branches, open vehicle tailgates, hanging signboards) and rapid approach hazards frequently result in head and upper-body injuries.
+2. **Access to Information & Text Recognition:** Conventional computer vision tools are either high-latency, cloud-dependent, or overwhelmed by visual clutter, making reading prescription bottles, street signs, transit markers, or restaurant menus slow and unreliable.
+3. **Telephony & Communication Barriers:** Mobile touchscreen dialing and caller identification are complex under high cognitive load. Existing screen readers can be cumbersome to operate during an incoming telephone call, especially when distinguishing critical contacts from automated spam or fraud.
+4. **Emergency Telemetry & Caregiver Anxiety:** When a blind individual experiences distress, loss of orientation, or a fall, standard mobile SOS triggers fail to transmit physical context (such as cane obstacle distance, battery status, or precise GPS accuracy) to parents or guardians in real time.
+5. **Software Fragmentation & Network Vulnerability:** Assistive features are typically scattered across 4 to 6 separate applications that break completely when cellular connectivity drops.
+
+---
+
+## 3. Project Objectives
+
+Drishti AI was conceived to overcome these barriers through concrete technical objectives:
+
+* **Voice-First & Multilingual Interaction:** Support intuitive, hands-free conversational control in English, Hindi, and Marathi across navigation, calling, vision, scheduling, and device telemetry.
+* **Autonomous & Connected Smart Cane:** Augment traditional white canes with millimeter-accurate Time-of-Flight (ToF) obstacle distance sensing (10 Hz cadence), autonomous handle vibration alerts, and low-energy BLE telemetry streaming.
+* **On-Device Vision & OCR Perception:** Provide real-time camera-based printed text recognition (ML Kit) with intelligent text deduplication, perspective distance estimation, and tactile feedback without streaming user video to external servers.
+* **Hands-Free Telephony & On-Device Contact Resolution:** Identify incoming callers via local `ContactsContract` queries, announce names via Text-to-Speech (TTS), and enable voice-activated answer, reject, mute, and speaker control via `TelecomManager`.
+* **Two-Sided Live Guardian Lifeline:** Facilitate cryptographic pairing between wards and approved guardians, streaming live GPS coordinates, battery levels, cane telemetry, and emergency alerts backed by strict PostgreSQL Row-Level Security (RLS).
+* **Conversational Scheduling & Alarms:** Enable full voice creation of daily reminders and calendar events, persisting them locally via Room with reliable `AlarmManager` wakeup execution.
+* **Offline-First Resilience:** Prioritize local execution for vision, cane alerts, calling, and scheduling. Implement local outbox queues to synchronize telemetry and event data with the backend once internet connectivity is restored.
+
+---
+
+## 4. Intended Users & Personas
+
+Drishti AI establishes two clearly separated user personas enforced at the database, business logic, and UI levels:
+
+### 4.1 Drishti Ward (Visually Impaired User)
+* **Profile:** Blind, visually impaired, or low-vision user seeking physical mobility and daily autonomy.
+* **Primary Interfaces:** Voice commands (wake-phrase or on-demand mic), TalkBack-compatible high-contrast touch controls, camera viewfinder with spoken feedback, and haptic vibrations.
+* **Sovereignty:** The ward retains absolute authorization sovereignty: pairing codes are generated by the ward, and the ward can approve, reject, or unilaterally revoke any guardian’s access at any time.
+
+### 4.2 Approved Parent / Guardian
+* **Profile:** Trusted family member, caregiver, or support network member.
+* **Primary Interfaces:** Visual monitoring dashboard rendering Google Maps live tracking, battery percentage, cane connection telemetry, emergency status indicators, and historical logs.
+* **Access Scope:** Strictly read-only access to live location and emergency telemetry, conditioned entirely upon active ward authorization validated by database RLS policies.
+
+---
+
+## 5. Core Architectural Principles
+
+```
++-----------------------------------------------------------------------------------+
+|                               DRISHTI AI CORE PRINCIPLES                          |
++-----------------------------------------------------------------------------------+
+| 1. Accessibility First | TalkBack semantics, high-contrast palette, haptic cues   |
+| 2. Offline-First Ops   | Local Room storage, on-device OCR/STT, outbox sync queue |
+| 3. Privacy & Safety    | Zero private cloud video, RLS tenancy, ward sovereignty  |
+| 4. Empirical Rigor     | No synthetic claims; verified on physical target devices |
++-----------------------------------------------------------------------------------+
+```
+
+1. **Accessibility First:** Every UI component adheres to Material 3 accessibility guidelines, providing accessible touch targets ($\ge 48 \times 48\,\text{dp}$), high-contrast palettes, logical focus orders, and rich audio/haptic feedback loops.
+2. **Offline-First Operation:** Critical safety features (obstacle sensing, emergency siren, local contact dialing, local OCR text extraction, scheduled alarms) operate autonomously without internet access. Local actions persist to Room and synchronize upstream via `SosSyncManager`.
+3. **Privacy & Security by Design:** Zero video streaming to third-party cloud APIs. All camera frames are analyzed on-device. Personal contacts stay sandboxed on the phone. Database access is guarded by cryptographic pairing codes and row-level authorization.
+4. **Engineering Rigor & Verification Honesty:** Documentation strictly separates verified physical implementations from prototypes or planned roadmap items.
