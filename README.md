@@ -247,22 +247,9 @@ adb install -r app/build/outputs/apk/debug/app-debug.apk
 
 Drishti AI has been presented at multiple hackathons, providing opportunities to demonstrate the project, collaborate as a team, and improve the solution.
 
-### 1. Mumbai Hackathon — Finalists 🏅
+### 1. Hack4Innovation (Mumbai) — Finalists 🏅
 
-**Achievement:** Selected as finalists with the Drishti AI team.
-
-**Team Members:**
-
-- **Chetan Gavali** — Android Security Tester & Hardware Developer
-- **Suyesh** — Android Developer & Researcher
-- **Vedika Chandratre** — Database Management Specialist & Researcher
-- **Poonam Sapte** — Web Application Tester & Researcher
-- **Samyak** — Web Developer & Tester
-- **Pranit** — Web Application Developer & Tester
-
-### 2. AITHON — Sangamner 🚀
-
-**Achievement:** Participated in AITHON, Sangamner, presenting the Drishti AI project.
+**Achievement:** Selected as finalists with the Drishti AI team at Hack4Innovation (Mumbai).
 
 **Team Members:**
 
@@ -273,9 +260,22 @@ Drishti AI has been presented at multiple hackathons, providing opportunities to
 - **Samyak** — Web Developer & Tester
 - **Pranit** — Web Application Developer & Tester
 
-### 3. VIT Pune Hackathon — Finalists 🏆
+### 2. AI-thon 2.0 (Sangamner) 🚀
 
-**Achievement:** Selected as finalists at the VIT Pune hackathon.
+**Achievement:** Participated in AI-thon 2.0, Sangamner, presenting the Drishti AI project.
+
+**Team Members:**
+
+- **Chetan Gavali** — Android Security Tester & Hardware Developer
+- **Suyesh** — Android Developer & Researcher
+- **Vedika Chandratre** — Database Management Specialist & Researcher
+- **Poonam Sapte** — Web Application Tester & Researcher
+- **Samyak** — Web Developer & Tester
+- **Pranit** — Web Application Developer & Tester
+
+### 3. Code Apex 3.0 (VIT Pune) — Finalists 🏆
+
+**Achievement:** Selected as finalists at Code Apex 3.0 (VIT Pune).
 
 **Team Members:**
 
