@@ -63,7 +63,7 @@ Drishti AI has been presented and validated across competitive hackathons, provi
         </td>
         <td align="center">
           <sub><b>📍 Sangamner, MH</b></sub><br />
-          <img src="https://img.shields.io/badge/Status-Demonstrated%20🚀-10B981?style=for-the-badge&labelColor=18181B" alt="Showcase Badge" />
+          <img src="https://img.shields.io/badge/Status-1st%20Runner%20Up%20🥈-10B981?style=for-the-badge&labelColor=18181B" alt="1st Runner Up Badge" />
         </td>
         <td align="center">
           <sub><b>📍 VIT Pune, MH</b></sub><br />
@@ -86,8 +86,8 @@ Drishti AI has been presented and validated across competitive hackathons, provi
           </ul>
         </td>
         <td align="left" valign="top">
-          <b>🚀 Assistive Innovation Track</b>
-          <p>Showcased offline multilingual speech commands, obstacle ranging, and caregiver emergency lifeline.</p>
+          <b>🥈 1st Runner Up Winner</b>
+          <p>Awarded <b>1st Runner Up</b> for demonstrating offline multilingual speech commands, obstacle ranging, and caregiver emergency lifeline.</p>
           <hr />
           <sub><b>👥 Active Roster:</b></sub>
           <ul>
