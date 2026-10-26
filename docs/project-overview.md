@@ -90,11 +90,23 @@ Drishti AI establishes two clearly separated user personas enforced at the datab
 
 Drishti AI has been presented and validated across competitive hackathons, providing real-world feedback to refine our hardware-to-cloud assistive architecture:
 
-| Hackathon | Location | Achievement | Event Team Leader |
-| :--- | :--- | :---: | :--- |
-| **💡 Hack4Innovation** | Mumbai, MH | 🏅 **Finalist** | 👑 **Suyesh Sonawane** *(Android Developer & Researcher)* |
-| **⚡ AI-thon 2.0** | Sangamner, MH | 🥈 **1st Runner Up Winner** | 👑 **Pranit** *(Web Application Developer & Tester)* |
-| **🔥 Code Apex 3.0** | VIT Pune, MH | 🏆 **Finalist** | 👑 **Vedika Chandratre** *(Database Management Specialist & Researcher)* |
+### 💡 Hack4Innovation — Mumbai, MH
+> **🏅 Achievement:** **Finalist**  
+> **👑 Event Team Leader:** **Suyesh Sonawane** &nbsp;•&nbsp; *Android Developer & Researcher*
+
+---
+
+### ⚡ AI-thon 2.0 — Sangamner, MH
+> **🥈 Achievement:** **1st Runner Up Winner**  
+> **👑 Event Team Leader:** **Pranit** &nbsp;•&nbsp; *Web Application Developer & Tester*
+
+---
+
+### 🔥 Code Apex 3.0 — VIT Pune, MH
+> **🏆 Achievement:** **Finalist**  
+> **👑 Event Team Leader:** **Vedika Chandratre** &nbsp;•&nbsp; *Database Management Specialist & Researcher*
+
+---
 
 > **🌟 Our Journey:** Each competitive hackathon provided empirical validation of our sub-50ms obstacle telemetry, multilingual speech command parsing (English, Hindi, Marathi), and offline Room database synchronization. Our continuous objective is transforming assistive engineering into real-world independence for visually impaired individuals through the synergy of AI, Android software, and custom smart-cane hardware.
 
