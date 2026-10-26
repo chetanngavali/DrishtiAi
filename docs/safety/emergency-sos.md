@@ -6,18 +6,18 @@ During moments of sudden disorientation, physical fall, medical distress, or per
 
 ```mermaid
 flowchart TD
-    Trigger[SOS Activation: Voice / Big Button / Cane] --> Countdown[5-Second Grace Countdown]
-    Countdown -->|User Cancels| Abort[Cancel & Announce: "SOS Cancelled"]
-    Countdown -->|Grace Period Expires| Dispatch[Active Emergency Triggered]
+    Trigger["SOS Activation: Voice / Big Button / Cane"] --> Countdown["5-Second Grace Countdown"]
+    Countdown -->|"User Cancels"| Abort["Cancel & Announce: SOS Cancelled"]
+    Countdown -->|"Grace Period Expires"| Dispatch["Active Emergency Triggered"]
     
-    Dispatch --> Channel1[Channel 1: Telephony Dial 112 National Emergency]
-    Dispatch --> Channel2[Channel 2: Direct SMS with Google Maps Link]
-    Dispatch --> Channel3[Channel 3: Supabase Realtime Telemetry Broadcast]
+    Dispatch --> Channel1["Channel 1: Telephony Dial 112 National Emergency"]
+    Dispatch --> Channel2["Channel 2: Direct SMS with Google Maps Link"]
+    Dispatch --> Channel3["Channel 3: Supabase Realtime Telemetry Broadcast"]
     
-    Channel3 --> ParentMap[Parent Dashboard Emergency Siren & Live Tracking]
+    Channel3 --> ParentMap["Parent Dashboard Emergency Siren & Live Tracking"]
     
-    ParentMap --> Resolve[Ward Activates: "I Am Safe" Resolution Flow]
-    Resolve --> Closed[Emergency Marked Resolved across Cloud & Devices]
+    ParentMap --> Resolve["Ward Activates: I Am Safe Resolution Flow"]
+    Resolve --> Closed["Emergency Marked Resolved across Cloud & Devices"]
 ```
 
 ---

@@ -6,19 +6,19 @@ Drishti AI’s vision pipeline transforms raw camera frames into structured audi
 
 ```mermaid
 flowchart LR
-    Camera[CameraX ImageAnalysis] -->|YUV_420_888 @ 6-10 FPS| Pipeline[PerceptionPipeline.kt]
-    Pipeline --> OCR[OcrRecognitionEngine (ML Kit)]
-    Pipeline --> ObjectDet[ObjectDetectionEngine (ML Kit)]
-    Pipeline --> Depth[DepthEstimator (Optical Pinhole)]
+    Camera["CameraX ImageAnalysis"] -->|"YUV_420_888 at 6-10 FPS"| Pipeline["PerceptionPipeline.kt"]
+    Pipeline --> OCR["OcrRecognitionEngine (ML Kit)"]
+    Pipeline --> ObjectDet["ObjectDetectionEngine (ML Kit)"]
+    Pipeline --> Depth["DepthEstimator (Optical Pinhole)"]
     
-    OCR --> Dedup[OcrDeduplicationManager]
-    Dedup --> TTS[TTS Spoken Reading]
+    OCR --> Dedup["OcrDeduplicationManager"]
+    Dedup --> TTS["TTS Spoken Reading"]
     
-    ObjectDet --> Hazard[HazardRiskEngine]
+    ObjectDet --> Hazard["HazardRiskEngine"]
     Depth --> Hazard
     
-    Hazard --> Haptics[HapticAlertManager]
-    Hazard --> AudioAlert[Directional Audio Cues]
+    Hazard --> Haptics["HapticAlertManager"]
+    Hazard --> AudioAlert["Directional Audio Cues"]
 ```
 
 ---

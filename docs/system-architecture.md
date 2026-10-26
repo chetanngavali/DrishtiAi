@@ -7,58 +7,58 @@ Drishti AI is structured as a resilient, multi-tier distributed ecosystem design
 ```mermaid
 flowchart TB
     subgraph EdgeHardware["1. Embedded Edge Tier (ESP32 Smart Cane)"]
-        Sensor[VL53L0X ToF Lidar] -->|I2C @ 10Hz| MCU[ESP32 Microcontroller]
-        MCU -->|GPIO High| Motor[Handle Haptic Motor]
-        MCU -->|PWM| Buzzer[Auditory Buzzer]
-        MCU -->|Nordic UART Service| BLE[BLE 4.2 GATT Server]
-        Cam[OV2640 Camera] -->|DVP Interface| MCU
-        MCU -->|Wi-Fi Station 802.11 b/g/n| Stream[/stream MJPEG Server]
+        Sensor["VL53L0X ToF Lidar"] -->|"I2C at 10Hz"| MCU["ESP32 Microcontroller"]
+        MCU -->|"GPIO High"| Motor["Handle Haptic Motor"]
+        MCU -->|"PWM"| Buzzer["Auditory Buzzer"]
+        MCU -->|"Nordic UART Service"| BLE["BLE 4.2 GATT Server"]
+        Cam["OV2640 Camera"] -->|"DVP Interface"| MCU
+        MCU -->|"Wi-Fi Station 802.11 b/g/n"| Stream["/stream MJPEG Server"]
     end
 
     subgraph AndroidHost["2. Mobile Client Tier (Kotlin & Jetpack Compose)"]
-        BLE <-->|GATT NUS Client| BleMgr[Esp32BleManager]
-        CamX[CameraX Engine] -->|ImageAnalysis @ 6 FPS| MLKit[ML Kit Text & Object Models]
-        Mic[Microphone Hardware] -->|AudioRecord| VoiceMgr[MicrophoneCoordinator & STT]
-        Telephony[Cellular Radio] -->|PHONE_STATE Broadcast| CallMgr[IncomingCallDetector & CallMgr]
+        BLE <-->|"GATT NUS Client"| BleMgr["Esp32BleManager"]
+        CamX["CameraX Engine"] -->|"ImageAnalysis at 6 FPS"| MLKit["ML Kit Text & Object Models"]
+        Mic["Microphone Hardware"] -->|"AudioRecord"| VoiceMgr["MicrophoneCoordinator & STT"]
+        Telephony["Cellular Radio"] -->|"PHONE_STATE Broadcast"| CallMgr["IncomingCallDetector & CallMgr"]
         
-        BleMgr --> Bridge[HardwareDistanceBridge]
-        MLKit --> Pipeline[PerceptionPipeline]
-        VoiceMgr --> Router[VoiceRouter]
-        CallMgr --> Identity[CallerIdentityResolver]
+        BleMgr --> Bridge["HardwareDistanceBridge"]
+        MLKit --> Pipeline["PerceptionPipeline"]
+        VoiceMgr --> Router["VoiceRouter"]
+        CallMgr --> Identity["CallerIdentityResolver"]
         
-        Bridge --> Risk[HazardRiskEngine]
+        Bridge --> Risk["HazardRiskEngine"]
         Pipeline --> Risk
-        Risk --> AudioHaptic[TTS Engine & HapticAlertManager]
+        Risk --> AudioHaptic["TTS Engine & HapticAlertManager"]
         
-        Router --> ActReg[ActionRegistry]
-        ActReg --> EvtMgr[EventManager & AlarmScheduler]
-        ActReg --> SOS[EmergencyManager]
+        Router --> ActReg["ActionRegistry"]
+        ActReg --> EvtMgr["EventManager & AlarmScheduler"]
+        ActReg --> SOS["EmergencyManager"]
         
-        EvtMgr <-->|Room CRUD| RoomDB[(Room Database: DrishtiDatabase)]
-        SOS <-->|Outbox Staging| RoomDB
+        EvtMgr <--> RoomDB[("Room Database: DrishtiDatabase")]
+        SOS <--> RoomDB
         
-        RoomDB <-->|NetworkCallback Trigger| SyncMgr[SosSyncManager]
+        RoomDB <--> SyncMgr["SosSyncManager"]
     end
 
     subgraph CloudBackend["3. Cloud Backend Tier (Supabase PostgreSQL + RLS)"]
-        SyncMgr <-->|HTTPS / REST PostgREST| SupaClient[Supabase Client SDK]
-        SupaClient <--> Auth[Supabase Auth / GoTrue]
-        SupaClient <--> DB[(PostgreSQL 15 Database)]
+        SyncMgr <-->|"HTTPS / REST PostgREST"| SupaClient["Supabase Client SDK"]
+        SupaClient <--> Auth["Supabase Auth / GoTrue"]
+        SupaClient <--> DB[("PostgreSQL 15 Database")]
         
-        DB --- RLS{Row-Level Security Policies}
-        RLS --- Profiles[public.profiles]
-        RLS --- Pairing[public.parent_child_relationships]
-        RLS --- LiveStatus[public.device_live_status]
-        RLS --- SOSTelem[public.emergency_telemetry]
+        DB --- RLS["Row-Level Security Policies"]
+        RLS --- Profiles["public.profiles"]
+        RLS --- Pairing["public.parent_child_relationships"]
+        RLS --- LiveStatus["public.device_live_status"]
+        RLS --- SOSTelem["public.emergency_telemetry"]
         
-        Router -.->|HTTPS Fallback Q&A| EdgeFunc[Supabase Edge Function: voice-ai]
-        EdgeFunc -.-> Gemini[Google Gemini 1.5 Flash]
+        Router -.->|"HTTPS Fallback Q&A"| EdgeFunc["Supabase Edge Function: voice-ai"]
+        EdgeFunc -.-> Gemini["Google Gemini 1.5 Flash"]
     end
 
     subgraph GuardianClient["4. Guardian Tier (Parent Application)"]
-        DB <-->|Supabase Realtime WebSocket| GuardianLive[Guardian Realtime Channel]
-        GuardianLive --> ParentVM[ParentDashboardViewModel]
-        ParentVM --> ParentUI[Jetpack Compose Dashboard & Google Maps]
+        DB <-->|"Supabase Realtime WebSocket"| GuardianLive["Guardian Realtime Channel"]
+        GuardianLive --> ParentVM["ParentDashboardViewModel"]
+        ParentVM --> ParentUI["Jetpack Compose Dashboard & Google Maps"]
     end
 ```
 
@@ -102,18 +102,18 @@ flowchart TB
 ```mermaid
 sequenceDiagram
     autonumber
-    participant Cane as ESP32 Cane
-    participant App as Android Client
-    participant Supa as Supabase DB
-    participant Parent as Parent Dashboard
+    participant Cane as "ESP32 Cane"
+    participant App as "Android Client"
+    participant Supa as "Supabase DB"
+    participant Parent as "Parent Dashboard"
 
-    Cane->>App: BLE GATT: Distance=850mm, Batt=88%
+    Cane->>App: BLE GATT Distance=850mm, Batt=88%
     App->>App: Update Internal Telemetry State
-    App->>App: Read GPS Satellite Location (20.009° N, 73.767° E)
+    App->>App: Read GPS Satellite Location
     App->>Supa: Heartbeat PostgREST Upsert (device_live_status)
-    Supa->>Supa: RLS Verification (auth.uid() = child_id)
+    Supa->>Supa: RLS Verification (auth.uid = child_id)
     Supa-->>Parent: Supabase Realtime Notification
-    Parent->>Parent: Re-render Google Maps Live Marker & Status Badge
+    Parent->>Parent: Re-render Google Maps Live Marker and Status Badge
 ```
 
 ### 3.2 Offline Emergency Trigger & Reconnection Flow
@@ -121,29 +121,30 @@ sequenceDiagram
 ```mermaid
 sequenceDiagram
     autonumber
-    participant User as Blind User
-    participant App as Android Client
-    participant Room as Local Room DB
-    participant Net as Cellular / Wi-Fi
-    participant Supa as Supabase DB
-    participant Parent as Parent Dashboard
+    participant User as "Blind User"
+    participant App as "Android Client"
+    participant Room as "Local Room DB"
+    participant SyncMgr as "SosSyncManager"
+    participant Net as "Cellular or Wi-Fi"
+    participant Supa as "Supabase DB"
+    participant Parent as "Parent Dashboard"
 
     Note over User,App: Cellular Data Unavailable (Offline Mode)
-    User->>App: Voice Command: "Emergency Help!"
-    App->>App: 5-Second Countdown + Haptic Cadence
+    User->>App: Voice Command Emergency Help
+    App->>App: 5-Second Countdown and Haptic Cadence
     App->>Room: INSERT SosSessionEntity (isSynced = false)
     App->>Room: INSERT SosTelemetryEntity (isSynced = false)
     App->>User: Launch National Emergency Call (Dial 112 Intent)
     App->>App: SMS Fallback to Emergency Contacts
     
     Note over App,Net: User enters Wi-Fi or cellular coverage area
-    Net->>App: ConnectivityManager onAvailable() Trigger
-    App->>SyncMgr: SosSyncManager.triggerSync()
-    SyncMgr->>Room: Query getUnsyncedSessions()
+    Net->>App: ConnectivityManager onAvailable Trigger
+    App->>SyncMgr: SosSyncManager triggerSync
+    SyncMgr->>Room: Query getUnsyncedSessions
     Room-->>SyncMgr: Return Pending Local Records
-    SyncMgr->>Supa: RPC start_emergency_session()
+    SyncMgr->>Supa: RPC start_emergency_session
     Supa-->>SyncMgr: Return Remote Session UUID
     SyncMgr->>Room: UPDATE SosSessionEntity (isSynced = true, remoteId = UUID)
     Supa-->>Parent: Realtime Urgent Alert Broadcast
-    Parent->>Parent: Trigger Emergency Siren & Map Overlay
+    Parent->>Parent: Trigger Emergency Siren and Map Overlay
 ```

@@ -52,15 +52,15 @@ When fully charged ($4.2\,\text{V}$), $V_{\text{ADC}} = 2.1\,\text{V}$, well wit
 
 ```mermaid
 flowchart LR
-    USB[USB-C 5V Input] --> TP[TP4056 Charger & DW01A Protection]
-    TP --> Cell[3.7V 18650 Li-ion Cell 2600mAh]
-    Cell --> Switch[Main SPST Power Switch]
-    Switch --> LDO[ME6211 3.3V LDO Regulator]
-    LDO --> Rail[3.3V Regulated System Rail]
-    Rail --> ESP[ESP32 MCU]
-    Rail --> TOF[VL53L0X Lidar]
-    Rail --> Motor[Haptic Circuit]
-    Rail --> Buzzer[Buzzer Circuit]
+    USB["USB-C 5V Input"] --> TP["TP4056 Charger and DW01A Protection"]
+    TP --> Cell["3.7V 18650 Li-ion Cell 2600mAh"]
+    Cell --> Switch["Main SPST Power Switch"]
+    Switch --> LDO["ME6211 3.3V LDO Regulator"]
+    LDO --> Rail["3.3V Regulated System Rail"]
+    Rail --> ESP["ESP32 MCU"]
+    Rail --> TOF["VL53L0X Lidar"]
+    Rail --> Motor["Haptic Circuit"]
+    Rail --> Buzzer["Buzzer Circuit"]
 ```
 
 ### 3.1 Power States & Current Consumption

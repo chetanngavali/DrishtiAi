@@ -6,13 +6,13 @@ The Drishti AI Smart Cane communicates wirelessly with the Android host applicat
 
 ```mermaid
 flowchart LR
-    ESP[ESP32 Smart Cane (GATT Server)] -->|BLE Advertisements: DRISHTI_CANE| Phone[Android Host (GATT Client)]
-    Phone -->|Connect & Discover Services| ESP
-    Phone -->|Enable CCCD Indications| ESP
-    ESP -->|TX Characteristic Notifications @ 5 Hz| BleMgr[Esp32BleManager.kt]
-    BleMgr --> Parser[ToFTelemetryParser]
-    Parser --> StateFlow[ToFTelemetry StateFlow]
-    StateFlow --> UI[Compose UI & Emergency Outbox]
+    ESP["ESP32 Smart Cane (GATT Server)"] -->|"BLE Advertisements: DRISHTI_CANE"| Phone["Android Host (GATT Client)"]
+    Phone -->|"Connect and Discover Services"| ESP
+    Phone -->|"Enable CCCD Indications"| ESP
+    ESP -->|"TX Characteristic Notifications at 5 Hz"| BleMgr["Esp32BleManager.kt"]
+    BleMgr --> Parser["ToFTelemetryParser"]
+    Parser --> StateFlow["ToFTelemetry StateFlow"]
+    StateFlow --> UI["Compose UI and Emergency Outbox"]
 ```
 
 ---

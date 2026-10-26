@@ -9,12 +9,12 @@ Drishti AI establishes two strictly distinct user roles enforced at the database
 
 ```mermaid
 flowchart LR
-    ClientAuth[Client Login / Signup] --> GoTrue[Supabase Auth (GoTrue)]
-    GoTrue --> JWT[Signed JWT (sub, role)]
-    JWT --> ProfileTrigger{Profile Creation Trigger}
-    ProfileTrigger -->|Role Check| Profiles[public.profiles]
-    Profiles --> RoleGuard[Trigger: trg_prevent_role_escalation]
-    RoleGuard --> RLSMatrix{Row-Level Security Policies}
+    ClientAuth["Client Login / Signup"] --> GoTrue["Supabase Auth (GoTrue)"]
+    GoTrue --> JWT["Signed JWT (sub, role)"]
+    JWT --> ProfileTrigger{"Profile Creation Trigger"}
+    ProfileTrigger -->|"Role Check"| Profiles["public.profiles"]
+    Profiles --> RoleGuard["Trigger: trg_prevent_role_escalation"]
+    RoleGuard --> RLSMatrix{"Row-Level Security Policies"}
 ```
 
 ---

@@ -6,19 +6,20 @@ Managing schedules, appointments, and medication reminders without visual sight 
 
 ```mermaid
 flowchart TD
-    User([Blind User]) -->|"Remind me to take medicine tomorrow at 8am"| Flow[EventConversationalFlow.kt]
-    Flow --> Parser[EventTimeParser.kt]
-    Parser --> Slots{Extract Slots: Title, Date, Time}
-    Slots -->|Missing Info| AskBack[Conversational Prompt: "What time?"]
+    User["Blind User"] -->|"Remind me to take medicine tomorrow at 8am"| Flow["EventConversationalFlow.kt"]
+    Flow --> Parser["EventTimeParser.kt"]
+    Parser --> Slots{"Extract Slots: Title, Date, Time"}
+    Slots -->|"Missing Info"| AskBack["Conversational Prompt: What time?"]
     AskBack --> User
-    Slots -->|Complete Slot Set| RoomInsert[EventDao.insertEvent()]
-    RoomInsert --> DB[(Room Database: DrishtiDatabase)]
-    DB --> Scheduler[EventAlarmScheduler.kt]
-    Scheduler --> AlarmMgr[Android AlarmManager: setExactAndAllowWhileIdle]
+    Slots -->|"Complete Slot Set"| RoomInsert["EventDao insertEvent"]
+    RoomInsert --> DB[("Room Database: DrishtiDatabase")]
+    DB --> Scheduler["EventAlarmScheduler.kt"]
+    Scheduler --> AlarmMgr["Android AlarmManager: setExactAndAllowWhileIdle"]
     
-    AlarmMgr -.->|Wakeup Timestamp Fired| Recv[EventAlarmReceiver.kt]
-    Recv --> Svc[EventAlarmService.kt]
-    Svc --> Overlay[EventAlarmActivity.kt & TTS Announcement]
+    AlarmMgr -.->|"Wakeup Timestamp Fired"| Recv["EventAlarmReceiver.kt"]
+    Recv --> Svc["EventAlarmService.kt"]
+    Overlay["EventAlarmActivity.kt and TTS Announcement"]
+    Svc --> Overlay
 ```
 
 ---

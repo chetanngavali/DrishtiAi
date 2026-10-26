@@ -6,22 +6,22 @@ Drishti AI relies on an enterprise-grade cloud backend powered by **Supabase** a
 
 ```mermaid
 flowchart TB
-    Client[Drishti Android Client (Ward)] <-->|HTTPS / REST| PostgREST[PostgREST API Gateway]
-    Parent[Guardian Dashboard (Parent)] <-->|WSS Realtime| Realtime[Supabase Realtime Engine]
+    Client["Drishti Android Client (Ward)"] <-->|"HTTPS or REST"| PostgREST["PostgREST API Gateway"]
+    Parent["Guardian Dashboard (Parent)"] <-->|"WSS Realtime"| Realtime["Supabase Realtime Engine"]
     
-    PostgREST <--> Auth[Supabase Auth / GoTrue]
-    PostgREST <--> PG[(PostgreSQL 15 Database Cluster)]
+    PostgREST <--> Auth["Supabase Auth or GoTrue"]
+    PostgREST <--> PG[("PostgreSQL 15 Database Cluster")]
     Realtime <--> PG
     
     subgraph PostgreSQL15["PostgreSQL 15 Core Engine"]
-        RLS[Row-Level Security Policies]
-        Tables[21 Application Tables]
-        RPCs[8 Stored Procedures / RPCs]
-        Triggers[Audit & State Triggers]
+        RLS["Row-Level Security Policies"]
+        Tables["21 Application Tables"]
+        RPCs["8 Stored Procedures or RPCs"]
+        Triggers["Audit and State Triggers"]
     end
     
-    Client -.->|POST /functions/v1/voice-ai| Edge[Deno Edge Function]
-    Edge -.->|HTTPS Gemini API| AI[Google Gemini 1.5 Flash]
+    Client -.->|"POST Edge Function"| Edge["Deno Edge Function: voice-ai"]
+    Edge -.->|"HTTPS Gemini API"| AI["Google Gemini 1.5 Flash"]
 ```
 
 ---

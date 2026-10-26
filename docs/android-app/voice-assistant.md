@@ -6,26 +6,26 @@ Drishti AI is designed around a voice-first interaction model, providing visuall
 
 ```mermaid
 flowchart TD
-    Mic[Microphone Hardware] --> Coord[MicrophoneCoordinator]
-    Coord --> Mode{Listening Mode}
-    Mode -->|On-Demand Touch / Quick Tap| STT[Android SpeechRecognizer]
-    Mode -->|Ringing State Auto-Listen| STT
-    Mode -->|Hands-Free Wake Phrase| WakeEngine[DrishtiWakeWordEngine]
+    Mic["Microphone Hardware"] --> Coord["MicrophoneCoordinator"]
+    Coord --> Mode{"Listening Mode"}
+    Mode -->|"On-Demand Touch / Quick Tap"| STT["Android SpeechRecognizer"]
+    Mode -->|"Ringing State Auto-Listen"| STT
+    Mode -->|"Hands-Free Wake Phrase"| WakeEngine["DrishtiWakeWordEngine"]
     
-    WakeEngine -.->|Blocked: Synthetic Corpus Only| StatusBlocked[TFLite Model Evaluated: Needs Human Voice Data]
+    WakeEngine -.->|"Blocked: Synthetic Corpus Only"| StatusBlocked["TFLite Model Evaluated: Needs Human Voice Data"]
     
-    STT --> Router[VoiceRouter.kt]
-    Router --> IntentCheck{Classify Intent}
+    STT --> Router["VoiceRouter.kt"]
+    Router --> IntentCheck{"Classify Intent"}
     
-    IntentCheck -->|Local Action| Registry[ActionRegistry.kt]
-    IntentCheck -->|Camera Object| CamSearch[CameraSearchEngine]
-    IntentCheck -->|Place / Transit| PlaceSearch[PlaceSearchEngine]
-    IntentCheck -->|General AI Query| EdgeFunc[Supabase Edge Function: voice-ai]
+    IntentCheck -->|"Local Action"| Registry["ActionRegistry.kt"]
+    IntentCheck -->|"Camera Object"| CamSearch["CameraSearchEngine"]
+    IntentCheck -->|"Place / Transit"| PlaceSearch["PlaceSearchEngine"]
+    IntentCheck -->|"General AI Query"| EdgeFunc["Supabase Edge Function: voice-ai"]
     
-    Registry --> Execution[Execute App Command]
-    CamSearch --> TTS[Text-to-Speech Spoken Output]
+    Registry --> Execution["Execute App Command"]
+    CamSearch --> TTS["Text-to-Speech Spoken Output"]
     PlaceSearch --> TTS
-    EdgeFunc -->|gemini-1.5-flash| TTS
+    EdgeFunc -->|"gemini-1.5-flash"| TTS
 ```
 
 ---

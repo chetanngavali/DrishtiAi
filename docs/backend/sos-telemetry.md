@@ -6,13 +6,13 @@ When a visually impaired user activates an emergency SOS alert or experiences an
 
 ```mermaid
 flowchart LR
-    GPS[GPS Hardware (FusedLocationProvider)] --> Host[Child Mobile Device (Vivo V2338)]
-    Cane[ESP32 Smart Cane (VL53L0X)] -->|BLE GATT (NUS)| Host
-    Batt[Battery Status Monitor] --> Host
+    GPS["GPS Hardware (FusedLocationProvider)"] --> Host["Child Mobile Device (Vivo V2338)"]
+    Cane["ESP32 Smart Cane (VL53L0X)"] -->|"BLE GATT NUS"| Host
+    Batt["Battery Status Monitor"] --> Host
     
-    Host -->|HTTPS Upsert (5s Cadence)| Supa[(Supabase PostgreSQL: device_live_status)]
-    Supa -->|Supabase Realtime WebSocket| ParentApp[Parent Compose Dashboard]
-    ParentApp --> Map[Google Maps Live Marker & Status Badge]
+    Host -->|"HTTPS Upsert 5s Cadence"| Supa[("Supabase PostgreSQL: device_live_status")]
+    Supa -->|"Supabase Realtime WebSocket"| ParentApp["Parent Compose Dashboard"]
+    ParentApp --> Map["Google Maps Live Marker and Status Badge"]
 ```
 
 ---

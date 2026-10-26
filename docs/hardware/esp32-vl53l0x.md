@@ -37,16 +37,16 @@ The sensor is sampled deterministically at $10\,\text{Hz}$ ($100\,\text{ms}$ int
 
 ```mermaid
 flowchart LR
-    Raw[VL53L0X Laser Ping] --> RangeCheck{Valid Range 30-2000mm?}
-    RangeCheck -->|No / Out of Bounds| Reject[Drop Reading]
-    RangeCheck -->|Yes| Median[3-Sample Median Filter]
-    Median --> Zone{Distance Zone Classification}
+    Raw["VL53L0X Laser Ping"] --> RangeCheck{"Valid Range 30-2000mm?"}
+    RangeCheck -->|"No or Out of Bounds"| Reject["Drop Reading"]
+    RangeCheck -->|"Yes"| Median["3-Sample Median Filter"]
+    Median --> Zone{"Distance Zone Classification"}
     
-    Zone -->|d > 1200mm| ZoneFar[Safe Zone: Haptics Off]
-    Zone -->|600mm < d <= 1200mm| ZoneMid[Caution Zone: Intermittent Haptic Pulse]
-    Zone -->|d <= 600mm| ZoneDanger[Danger Zone: Continuous Haptic + Buzzer]
+    Zone -->|"Distance over 1200mm"| ZoneFar["Safe Zone: Haptics Off"]
+    Zone -->|"Distance 600mm to 1200mm"| ZoneMid["Caution Zone: Intermittent Haptic Pulse"]
+    Zone -->|"Distance under 600mm"| ZoneDanger["Danger Zone: Continuous Haptic + Buzzer"]
     
-    ZoneFar --> BLE[Stage BLE Packet]
+    ZoneFar --> BLE["Stage BLE Packet"]
     ZoneMid --> BLE
     ZoneDanger --> BLE
 ```

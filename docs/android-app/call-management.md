@@ -7,27 +7,27 @@ For a visually impaired user, answering or declining a phone call using a standa
 ```mermaid
 sequenceDiagram
     autonumber
-    participant Cell as Cellular Network
-    participant Recv as IncomingCallDetector (Receiver)
-    participant CallMgr as DrishtiCallManager
-    participant Contacts as ContactsContract (Local)
-    participant TTS as Spoken Announcement
-    participant Mic as DrishtiWakeWordService
-    participant Telecom as Android TelecomManager
+    participant Cell as "Cellular Network"
+    participant Recv as "IncomingCallDetector"
+    participant CallMgr as "DrishtiCallManager"
+    participant Contacts as "ContactsContract"
+    participant TTS as "Spoken Announcement"
+    participant Mic as "DrishtiWakeWordService"
+    participant Telecom as "Android TelecomManager"
 
-    Cell->>Recv: Broadcast: PHONE_STATE (RINGING)
-    Recv->>Recv: goAsync() Keep Process Alive
-    Recv->>CallMgr: onIncomingRinging(incomingNumber)
-    CallMgr->>Contacts: Local Name Lookup (PhoneLookup)
-    Contacts-->>CallMgr: Return "Dr. Sharma" (or Unsaved)
-    CallMgr->>TTS: Spoken Announcement: "Incoming call from Dr. Sharma"
-    TTS-->>CallMgr: onDone()
-    CallMgr->>Mic: startCallCommandListening(15s Window)
-    Note over Mic: Mic Active (No Wake Word Required)
-    User->>Mic: "Pick up the call" / "कॉल उठाओ" / "कॉल उचल"
-    Mic->>CallMgr: Recognized Intent: ANSWER_CALL
-    CallMgr->>Telecom: acceptRingingCall()
-    Telecom->>Cell: Call Connected (OFFHOOK)
+    Cell->>Recv: Broadcast PHONE_STATE RINGING
+    Recv->>Recv: goAsync Keep Process Alive
+    Recv->>CallMgr: onIncomingRinging with incoming number
+    CallMgr->>Contacts: Local Name Lookup via PhoneLookup
+    Contacts-->>CallMgr: Return Dr. Sharma or Unsaved
+    CallMgr->>TTS: Spoken Announcement: Incoming call from Dr. Sharma
+    TTS-->>CallMgr: Announcement Complete
+    CallMgr->>Mic: startCallCommandListening 15s Window
+    Note over Mic: Mic Active without Wake Word Required
+    User->>Mic: Voice Command: Pick up the call
+    Mic->>CallMgr: Recognized Intent ANSWER_CALL
+    CallMgr->>Telecom: acceptRingingCall
+    Telecom->>Cell: Call Connected OFFHOOK
 ```
 
 ---

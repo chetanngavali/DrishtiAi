@@ -48,44 +48,44 @@ Drishti AI coordinates four distributed tiers to deliver sub-50ms hard real-time
 
 ```mermaid
 flowchart TB
-    subgraph Tier1["1. Embedded Smart Cane (ESP32-CAM)"]
-        Sensor[VL53L0X ToF Lidar] -->|I2C @ 10Hz| MCU[ESP32 FreeRTOS Core 1]
-        MCU -->|Autonomous Output| Haptic[Handle Vibration Motor & Buzzer]
-        MCU -->|BLE GATT (NUS Service)| BLEStream[Distance & Batt Telemetry]
-        Cam[OV2640 Camera] -->|Core 0 WiFi| HTTPStream[/stream MJPEG Server]
+    subgraph Tier1 ["1. Embedded Smart Cane ESP32-CAM"]
+        Sensor["VL53L0X ToF Lidar"] -->|"I2C at 10Hz"| MCU["ESP32 FreeRTOS Core 1"]
+        MCU -->|"Autonomous Output"| Haptic["Handle Vibration Motor and Buzzer"]
+        MCU -->|"BLE GATT NUS Service"| BLEStream["Distance and Battery Telemetry"]
+        Cam["OV2640 Camera"] -->|"Core 0 WiFi"| HTTPStream["MJPEG Video Server"]
     end
 
-    subgraph Tier2["2. Native Android Client (Kotlin / Compose)"]
-        BLEStream <--> BleMgr[Esp32BleManager]
-        CamX[CameraX Engine] --> OCR[ML Kit On-Device OCR & Objects]
-        Mic[Microphone Hardware] --> VoiceRouter[Multilingual VoiceRouter (EN/HI/MR)]
-        Radio[Cellular Telephony] --> CallMgr[TelecomManager & Contacts Lookup]
+    subgraph Tier2 ["2. Native Android Client Kotlin Compose"]
+        BLEStream <--> BleMgr["Esp32BleManager"]
+        CamX["CameraX Engine"] --> OCR["ML Kit On-Device OCR and Objects"]
+        Mic["Microphone Hardware"] --> VoiceRouter["Multilingual VoiceRouter EN HI MR"]
+        Radio["Cellular Telephony"] --> CallMgr["TelecomManager and Contacts Lookup"]
         
-        OCR --> RiskEngine[HazardRiskEngine & Haptics]
+        OCR --> RiskEngine["HazardRiskEngine and Haptics"]
         BleMgr --> RiskEngine
         
-        VoiceRouter --> CalMgr[Calendar & AlarmScheduler]
-        VoiceRouter --> SOSMgr[EmergencyManager]
+        VoiceRouter --> CalMgr["Calendar and AlarmScheduler"]
+        VoiceRouter --> SOSMgr["EmergencyManager"]
         
-        CalMgr <--> RoomDB[(Room Database: DrishtiDatabase)]
+        CalMgr <--> RoomDB[("Room Database: DrishtiDatabase")]
         SOSMgr <--> RoomDB
-        RoomDB <--> SyncMgr[SosSyncManager (NetworkCallback)]
+        RoomDB <--> SyncMgr["SosSyncManager NetworkCallback"]
     end
 
-    subgraph Tier3["3. Cloud Backend (Supabase PostgreSQL 15)"]
-        SyncMgr <-->|HTTPS REST| SupaAuth[Supabase Auth & PostgREST]
-        SupaAuth <--> PG[(PostgreSQL 15 Cluster)]
-        PG --- RLS{100% Row-Level Security}
-        RLS --- Pairing[public.parent_child_relationships]
-        RLS --- LiveTelemetry[public.device_live_status]
+    subgraph Tier3 ["3. Cloud Backend Supabase PostgreSQL 15"]
+        SyncMgr <-->|"HTTPS REST"| SupaAuth["Supabase Auth and PostgREST"]
+        SupaAuth <--> PG[("PostgreSQL 15 Cluster")]
+        PG --- RLS["100% Row-Level Security"]
+        RLS --- Pairing["public.parent_child_relationships"]
+        RLS --- LiveTelemetry["public.device_live_status"]
         
-        VoiceRouter -.->|Fallback AI Q&A| EdgeFunc[Supabase Edge Function: voice-ai]
-        EdgeFunc -.-> Gemini[Google Gemini 1.5 Flash]
+        VoiceRouter -.->|"Fallback AI Q and A"| EdgeFunc["Supabase Edge Function: voice-ai"]
+        EdgeFunc -.-> Gemini["Google Gemini 1.5 Flash"]
     end
 
-    subgraph Tier4["4. Caregiver Dashboard (Parent Client)"]
-        PG <-->|Realtime WebSockets| ParentLive[Parent Dashboard]
-        ParentLive --> LiveMap[Google Maps Live GPS & Battery Tracking]
+    subgraph Tier4 ["4. Caregiver Dashboard Parent Client"]
+        PG <-->|"Realtime WebSockets"| ParentLive["Parent Dashboard"]
+        ParentLive --> LiveMap["Google Maps Live GPS and Battery Tracking"]
     end
 ```
 

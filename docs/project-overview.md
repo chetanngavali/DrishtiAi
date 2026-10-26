@@ -12,14 +12,14 @@
 By uniting a native Android application (Kotlin, Jetpack Compose, CameraX, ML Kit, TelecomManager) with custom embedded smart-cane hardware (ESP32-CAM, VL53L0X Time-of-Flight lidar, BLE telemetry, autonomous haptic feedback) and a secure cloud backend (Supabase PostgreSQL, Row-Level Security, Edge Functions), Drishti AI eliminates the fragmentation of existing assistive solutions into a cohesive, voice-first, offline-capable platform.
 
 ```mermaid
-graph TD
-    User([Visually Impaired User / Ward]) <-->|Voice, TTS & Haptics| AndroidApp[Drishti Native Android Client]
-    Cane[ESP32 Smart Cane + ToF Lidar] <-->|BLE GATT & Telemetry| AndroidApp
-    AndroidApp <-->|CameraX & Local ML Kit| Perception[On-Device Vision & OCR Pipeline]
-    AndroidApp <-->|Room DB Outbox & Sync| LocalStore[(Local Room Database)]
-    AndroidApp <-->|Authenticated PostgREST / Realtime| Backend[(Supabase PostgreSQL + RLS)]
-    Backend <-->|Authorized Live Stream & Maps| GuardianApp[Parent / Guardian Dashboard]
-    Guardian([Authorized Parent / Guardian]) <-->|Pairing Code & Approvals| GuardianApp
+flowchart TD
+    User["Visually Impaired User or Ward"] <-->|"Voice, TTS and Haptics"| AndroidApp["Drishti Native Android Client"]
+    Cane["ESP32 Smart Cane and ToF Lidar"] <-->|"BLE GATT and Telemetry"| AndroidApp
+    AndroidApp <-->|"CameraX and Local ML Kit"| Perception["On-Device Vision and OCR Pipeline"]
+    AndroidApp <-->|"Room DB Outbox and Sync"| LocalStore[("Local Room Database")]
+    AndroidApp <-->|"Authenticated PostgREST or Realtime"| Backend[("Supabase PostgreSQL and RLS")]
+    Backend <-->|"Authorized Live Stream and Maps"| GuardianApp["Parent or Guardian Dashboard"]
+    Guardian["Authorized Parent or Guardian"] <-->|"Pairing Code and Approvals"| GuardianApp
 ```
 
 ---

@@ -7,24 +7,24 @@ Drishti AI implements an outbox pattern for asynchronous data synchronization, e
 ```mermaid
 sequenceDiagram
     autonumber
-    participant UI as User / Engine
-    participant Room as Room Local Outbox
-    participant Net as Network Monitor
-    participant Sync as SosSyncManager
-    participant Cloud as Supabase Backend
+    participant UI as "User / Engine"
+    participant Room as "Room Local Outbox"
+    participant Net as "Network Monitor"
+    participant Sync as "SosSyncManager"
+    participant Cloud as "Supabase Backend"
 
-    UI->>Room: 1. Perform Action (e.g. Trigger SOS)
-    Room->>Room: 2. Save Locally (INSERT)
-    Room->>Room: 3. Mark Outbox: isSynced = false
+    UI->>Room: Perform Action (Trigger SOS)
+    Room->>Room: Save Locally (INSERT)
+    Room->>Room: Mark Outbox (isSynced = false)
     
-    Note over Net,Sync: Internet Restored (Cellular / Wi-Fi)
-    Net->>Sync: 4. ConnectivityManager onAvailable()
-    Sync->>Room: 5. Query Pending: getUnsyncedSessions()
+    Note over Net,Sync: Internet Restored (Cellular or Wi-Fi)
+    Net->>Sync: ConnectivityManager onAvailable
+    Sync->>Room: Query Pending (getUnsyncedSessions)
     Room-->>Sync: Return Unsynced List
-    Sync->>Cloud: 6. PostgREST RPC: start_emergency_session()
-    Cloud-->>Sync: 7. Server Confirms: Return Remote Session UUID
-    Sync->>Room: 8. Update: isSynced = true, remoteSessionId = UUID
-    Note over Sync,Room: 9. Failed items remain isSynced = false for retry
+    Sync->>Cloud: PostgREST RPC start_emergency_session
+    Cloud-->>Sync: Server Confirms (Return Remote Session UUID)
+    Sync->>Room: Update (isSynced = true, remoteSessionId = UUID)
+    Note over Sync,Room: Failed items remain isSynced = false for retry
 ```
 
 ---

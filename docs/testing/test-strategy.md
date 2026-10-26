@@ -10,10 +10,10 @@ flowchart TD
     Tier2 --> Tier3["Tier 3: Instrumented UI & ADB Suite"]
     Tier3 --> Tier4["Tier 4: Physical Hardware Bench Suite"]
     
-    Tier1 -->|JUnit 4/5 & Robolectric| Gate1[476 Automated Unit Tests]
-    Tier2 -->|Node.js & Live Supabase| Gate2[62 Multi-Persona RLS Checks]
-    Tier3 -->|AndroidX & UI Hierarchy| Gate3[Compose Instrumentation on Device]
-    Tier4 -->|Vivo V2338 & ESP32 Cane| Gate4[20 Telephony & 14 Telemetry Tests]
+    Tier1 -->|"JUnit 4/5 & Robolectric"| Gate1["476 Automated Unit Tests"]
+    Tier2 -->|"Node.js & Live Supabase"| Gate2["62 Multi-Persona RLS Checks"]
+    Tier3 -->|"AndroidX & UI Hierarchy"| Gate3["Compose Instrumentation on Device"]
+    Tier4 -->|"Vivo V2338 & ESP32 Cane"| Gate4["20 Telephony & 14 Telemetry Tests"]
 ```
 
 ---

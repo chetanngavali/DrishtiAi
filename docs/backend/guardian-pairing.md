@@ -12,25 +12,25 @@ Caregiver monitoring must never compromise user autonomy or allow covert trackin
 ```mermaid
 sequenceDiagram
     autonumber
-    participant Ward as Ward Mobile Client
-    participant Supa as Supabase Database (PostgreSQL)
-    participant Parent as Parent Dashboard
+    participant Ward as "Ward Mobile Client"
+    participant Supa as "Supabase Database"
+    participant Parent as "Parent Dashboard"
 
-    Ward->>Supa: RPC generate_pairing_code()
-    Supa->>Supa: Gen 6-Char Code ("DR7X9K"), Gen Salt, Hash SHA-256
-    Supa->>Supa: Store Digest & Expiry (+10 min) in pairing_codes
-    Supa-->>Ward: Return Plaintext Code ("DR7X9K")
+    Ward->>Supa: RPC generate_pairing_code
+    Supa->>Supa: Gen 6-Char Code, Gen Salt, Hash SHA-256
+    Supa->>Supa: Store Digest and Expiry in pairing_codes
+    Supa-->>Ward: Return Plaintext Code DR7X9K
     Ward->>Parent: Verbal or Screen Share of Code
-    Parent->>Supa: RPC submit_pairing_code("DR7X9K")
-    Supa->>Supa: Check pairing_attempt_tracker (Attempts < 5)
-    Supa->>Supa: Validate Digest & Expiration
-    Supa->>Supa: Mark is_used = true, Insert status = 'pending'
-    Supa-->>Parent: Relationship Created (Pending Approval)
-    Supa-->>Ward: Push Notification / Realtime: "Parent Request"
-    Ward->>Supa: RPC respond_to_pairing_request(rel_id, 'approved')
-    Supa->>Supa: UPDATE status = 'approved'
+    Parent->>Supa: RPC submit_pairing_code
+    Supa->>Supa: Check pairing_attempt_tracker
+    Supa->>Supa: Validate Digest and Expiration
+    Supa->>Supa: Mark is_used = true, Insert status = pending
+    Supa-->>Parent: Relationship Created Pending Approval
+    Supa-->>Ward: Realtime Alert Parent Pairing Request
+    Ward->>Supa: RPC respond_to_pairing_request
+    Supa->>Supa: UPDATE status = approved
     Note over Parent,Supa: Guardian Now Authorized under RLS
-    Parent->>Supa: Live Telemetry & Maps Access Active
+    Parent->>Supa: Live Telemetry and Maps Access Active
 ```
 
 ---

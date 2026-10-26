@@ -10,15 +10,15 @@ Drishti AI is built upon an **offline-first local persistence architecture**:
 
 ```mermaid
 flowchart TD
-    Action[User Action / Sensor Event] --> LocalWrite{Write to Local Storage First}
-    LocalWrite --> Room[(Room Database: DrishtiDatabase)]
-    LocalWrite --> Prefs[(Encrypted SharedPreferences Cache)]
+    Action["User Action / Sensor Event"] --> LocalWrite{"Write to Local Storage First"}
+    LocalWrite --> Room[("Room Database: DrishtiDatabase")]
+    LocalWrite --> Prefs[("Encrypted SharedPreferences Cache")]
     
-    Room --> Unsynced[Mark Record: isSynced = false]
-    Unsynced --> Outbox[Outbox Staging Queue]
+    Room --> Unsynced["Mark Record: isSynced = false"]
+    Unsynced --> Outbox["Outbox Staging Queue"]
     
-    Outbox -.->|Network Restored| SyncMgr[SosSyncManager]
-    SyncMgr -.->|PostgREST Upload| Supa[(Supabase Cloud PostgreSQL)]
+    Outbox -.->|"Network Restored"| SyncMgr["SosSyncManager"]
+    SyncMgr -.->|"PostgREST Upload"| Supa[("Supabase Cloud PostgreSQL")]
 ```
 
 ---
