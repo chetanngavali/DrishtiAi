@@ -243,6 +243,37 @@ adb install -r app/build/outputs/apk/debug/app-debug.apk
 
 ---
 
+## 🏆 Hackathons & Achievements
+
+Drishti AI has been developed and presented through multiple hackathons, giving our team opportunities to demonstrate the project, receive feedback, and improve our assistive technology solution.
+
+### 1. Mumbai Hackathon
+
+- **Participation:** Presented Drishti AI with our team members.
+- **Achievement:** Participated in the hackathon and progressed to the finalist stage.
+- **Focus:** Showcasing our assistive technology concept and its potential to support visually impaired users.
+
+### 2. AITHON — Sangamner
+
+- **Participation:** Presented and developed the Drishti AI project as part of our hackathon journey.
+- **Focus:** Demonstrating the project's accessibility features, technical implementation, and real-world application.
+
+### 3. VIT Pune Hackathon
+
+- **Participation:** Presented Drishti AI at VIT Pune.
+- **Achievement:** Selected as finalists.
+- **Focus:** Presenting our solution, technical approach, and its potential impact on independent living and accessibility.
+
+### Our Journey
+
+Each hackathon has helped us refine our ideas, strengthen our technical skills, collaborate as a team, and advance Drishti AI toward a more practical assistive technology platform.
+
+We are continuing to improve the application, smart-cane integration, accessibility features, and safety workflows based on development progress and feedback.
+
+**Team:** Chetan Gavali, Suyesh, Vedika Chandratre, Poonam Sapte, Samyak, and Pranit.
+
+---
+
 ## 👥 Project Team and Responsibilities
 
 Drishti AI is developed by a multidisciplinary team working across Android development, cybersecurity, embedded hardware, database management, web development, testing, and research.

@@ -86,11 +86,42 @@ Drishti AI establishes two clearly separated user personas enforced at the datab
 
 ---
 
-## 6. Project Team and Responsibilities
+## 6. 🏆 Hackathons & Achievements
+
+Drishti AI has been developed and presented through multiple hackathons, giving our team opportunities to demonstrate the project, receive feedback, and improve our assistive technology solution.
+
+### 6.1 Mumbai Hackathon
+
+- **Participation:** Presented Drishti AI with our team members.
+- **Achievement:** Participated in the hackathon and progressed to the finalist stage.
+- **Focus:** Showcasing our assistive technology concept and its potential to support visually impaired users.
+
+### 6.2 AITHON — Sangamner
+
+- **Participation:** Presented and developed the Drishti AI project as part of our hackathon journey.
+- **Focus:** Demonstrating the project's accessibility features, technical implementation, and real-world application.
+
+### 6.3 VIT Pune Hackathon
+
+- **Participation:** Presented Drishti AI at VIT Pune.
+- **Achievement:** Selected as finalists.
+- **Focus:** Presenting our solution, technical approach, and its potential impact on independent living and accessibility.
+
+### 6.4 Our Journey
+
+Each hackathon has helped us refine our ideas, strengthen our technical skills, collaborate as a team, and advance Drishti AI toward a more practical assistive technology platform.
+
+We are continuing to improve the application, smart-cane integration, accessibility features, and safety workflows based on development progress and feedback.
+
+**Team:** Chetan Gavali, Suyesh, Vedika Chandratre, Poonam Sapte, Samyak, and Pranit.
+
+---
+
+## 7. Project Team and Responsibilities
 
 Drishti AI is developed by a multidisciplinary team working across Android development, cybersecurity, embedded hardware, database management, web development, testing, and research.
 
-### 6.1 Chetan Gavali
+### 7.1 Chetan Gavali
 
 **Role:** Android Security Tester & Hardware Developer
 
@@ -105,7 +136,7 @@ Drishti AI is developed by a multidisciplinary team working across Android devel
 - Test emergency SOS and smart-cane functionality.
 - Contribute to system integration, security validation, and technical documentation.
 
-### 6.2 Suyesh
+### 7.2 Suyesh
 
 **Role:** Android Developer & Researcher
 
@@ -118,7 +149,7 @@ Drishti AI is developed by a multidisciplinary team working across Android devel
 - Investigate technical issues and contribute to feature testing.
 - Document implementation approaches and research findings.
 
-### 6.3 Vedika Chandratre
+### 7.3 Vedika Chandratre
 
 **Role:** Database Management Specialist & Researcher
 
@@ -131,7 +162,7 @@ Drishti AI is developed by a multidisciplinary team working across Android devel
 - Support database integrity, access-control policies, and data consistency testing.
 - Document database architecture and research findings.
 
-### 6.4 Poonam Sapte
+### 7.4 Poonam Sapte
 
 **Role:** Web Application Tester & Researcher
 
@@ -144,7 +175,7 @@ Drishti AI is developed by a multidisciplinary team working across Android devel
 - Prepare test cases, record findings, and support issue verification.
 - Contribute to technical reports and research documentation.
 
-### 6.5 Samyak
+### 7.5 Samyak
 
 **Role:** Web Developer & Tester
 
@@ -157,7 +188,7 @@ Drishti AI is developed by a multidisciplinary team working across Android devel
 - Collaborate with the testing team to verify fixes.
 - Support web application integration and technical documentation.
 
-### 6.6 Pranit
+### 7.6 Pranit
 
 **Role:** Web Application Developer & Tester
 
@@ -173,7 +204,7 @@ Drishti AI is developed by a multidisciplinary team working across Android devel
 
 ---
 
-## 7. Team Collaboration
+## 8. Team Collaboration
 
 The team works collaboratively to develop and evaluate Drishti AI as an assistive technology platform. Responsibilities span Android software, embedded hardware, database systems, web applications, testing, cybersecurity, and technical research.
 
