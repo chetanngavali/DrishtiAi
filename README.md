@@ -412,32 +412,6 @@ Team members may collaborate across modules when integration, debugging, testing
 
 ---
 
-## 📈 Repository Analytics & Viewer Traffic
-
-Drishti AI tracks repository activity, release adoption, and community engagement:
-
-```mermaid
-xychart-beta
-    title "Weekly Repository Views & Traffic Trends"
-    x-axis [Mon, Tue, Wed, Thu, Fri, Sat, Sun]
-    y-axis "Views" 0 --> 250
-    bar [65, 88, 142, 110, 175, 210, 160]
-    line [65, 88, 142, 110, 175, 210, 160]
-```
-
-<div align="center">
-
-[![Drishti AI Repo Card](https://github-readme-stats.vercel.app/api/pin/?username=chetanngavali&repo=DrishtiAi&theme=tokyonight)](https://github.com/chetanngavali/DrishtiAi)
-
-| Metric | Real-Time Tracker | Source |
-| :--- | :---: | :--- |
-| **Total Cumulative Views** | [![Repository Views](https://komarev.com/ghpvc/?username=chetanngavali&repo=DrishtiAi&label=Total%20Views&color=0e75b6)](https://github.com/chetanngavali/DrishtiAi) | Dynamic Visitor Counter |
-| **Pulse & Analytics** | [GitHub Traffic Dashboard](https://github.com/chetanngavali/DrishtiAi/pulse) | GitHub Insights API |
-
-</div>
-
----
-
 ## 🛡️ Security, Privacy & Responsible Disclosure
 
 Drishti AI takes user privacy and security seriously:
