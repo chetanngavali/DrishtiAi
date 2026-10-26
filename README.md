@@ -46,27 +46,13 @@ Drishti AI features an exhaustive documentation suite organized within the [`doc
 
 Drishti AI has been presented and validated across competitive hackathons, providing real-world feedback to refine our hardware-to-cloud assistive architecture:
 
-> [!NOTE]
-> ### 💡 Hack4Innovation — Mumbai
-> **Status:** `Finalist 🏅` &nbsp;•&nbsp; **Team Leader:** 👑 **Suyesh Sonawane** *(Android Developer & Researcher)*
-> 
-> Presented Drishti AI's vision-first assistive pipeline and embedded smart-cane telemetry to the jury, advancing through competitive evaluation rounds to the grand finale.
+| Hackathon | Location | Achievement | Event Team Leader |
+| :--- | :--- | :---: | :--- |
+| **💡 Hack4Innovation** | Mumbai, MH | 🏅 **Finalist** | 👑 **Suyesh Sonawane** *(Android Developer & Researcher)* |
+| **⚡ AI-thon 2.0** | Sangamner, MH | 🥈 **1st Runner Up Winner** | 👑 **Pranit** *(Web Application Developer & Tester)* |
+| **🔥 Code Apex 3.0** | VIT Pune, MH | 🏆 **Finalist** | 👑 **Vedika Chandratre** *(Database Management Specialist & Researcher)* |
 
-> [!IMPORTANT]
-> ### ⚡ AI-thon 2.0 — Sangamner
-> **Status:** `1st Runner Up Winner 🥈` &nbsp;•&nbsp; **Team Leader:** 👑 **Pranit** *(Web Application Developer & Tester)*
-> 
-> Awarded **1st Runner Up** for demonstrating offline multilingual speech commands, sub-50ms obstacle lidar ranging, and the caregiver emergency lifeline.
-
-> [!NOTE]
-> ### 🔥 Code Apex 3.0 — VIT Pune
-> **Status:** `Finalist 🏆` &nbsp;•&nbsp; **Team Leader:** 👑 **Vedika Chandratre** *(Database Management Specialist & Researcher)*
-> 
-> Selected as **Finalists** for engineered synergy uniting on-device ML Kit OCR, hands-free telephony, and IoT smart-cane obstacle sensing.
-
-> [!TIP]
-> ### 🌟 Our Hackathon Journey
-> Each competitive hackathon provided empirical validation of our sub-50ms obstacle telemetry, multilingual speech command parsing (English, Hindi, Marathi), and offline Room database synchronization. Our continuous objective is transforming assistive engineering into real-world independence for visually impaired individuals through the synergy of AI, Android software, and custom smart-cane hardware.
+> **🌟 Our Journey:** Each competitive hackathon provided empirical validation of our sub-50ms obstacle telemetry, multilingual speech command parsing (English, Hindi, Marathi), and offline Room database synchronization. Our continuous objective is transforming assistive engineering into real-world independence for visually impaired individuals through the synergy of AI, Android software, and custom smart-cane hardware.
 
 ---
 
